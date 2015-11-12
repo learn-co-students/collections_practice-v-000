@@ -15,6 +15,11 @@ def swap_elements(arr)
   arr
 end
 
+def swap_elements_from_to(arr, index, destination_index)
+  arr[index], arr[destination_index] = arr[destination_index], arr[index]
+  arr
+end
+
 def reverse_array(arr)
   arr.reverse
 end
@@ -32,8 +37,7 @@ def sum_array(arr)
 end
 
 def add_s(arr)
-  arr.each_with_index do |word, index| 
-    next if index == 1
-    word << "s"
+  arr.each_with_index.map do |word, index| 
+    index == 1 ? word : word << "s"
   end
 end
