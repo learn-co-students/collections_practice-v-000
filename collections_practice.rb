@@ -17,9 +17,42 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
-  new_second = array[2]
-  new_third = array[1]
-  array[1] = new_second
-  array[2] = new_third
+  array[1], array[2] = array[2], array[1]
   array
 end
+
+def reverse_array(array)
+  array.reverse
+end
+
+def kesha_maker(array)
+  i = 0
+  while i < array.length
+    array[i][2]="$"
+    i += 1
+  end
+  array
+end
+
+def find_a(array)
+  array.select do |element|
+    element[0] == "a"
+  end
+end
+
+def sum_array(array)
+  array.inject(:+)
+end
+
+def add_s(array)
+  i = 0
+  while i < array.length    
+    array[i] =array[i] + "s" if i  != 1    
+    i += 1
+  end
+  array
+end
+
+
+
+
