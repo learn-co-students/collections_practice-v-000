@@ -1,0 +1,14 @@
+require_relative '../collections_practice'
+
+print sort_array_char_count(["dogs", "cat", "horses"])
+
+print swap_elements_from_to(["a", "b", "c"],0,2) #=> ["c", "b", "a"]
+print swap_elements_from_to(["a", "b", "c"],2,1) #=> ["a", "c", "b"]
+
+print kesha_maker(["kesha", "pussy", "boss"])
+
+print find_a(["apple", "busy", "cry", "arch"])
+
+puts sum_array([1,2,3])
+
+puts add_s(["ladder", "feet", "hand", "table"])
