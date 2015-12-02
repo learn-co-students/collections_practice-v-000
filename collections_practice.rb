@@ -18,7 +18,6 @@ def swap_elements(array)
   return array
 end
   array.swap_elements_from_to(array,1,2)
-  puts array
   return array
   
 end
