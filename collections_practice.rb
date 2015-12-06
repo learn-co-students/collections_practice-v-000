@@ -44,3 +44,15 @@ def find_a(array)
       string.start_with?("a") 
    end
 end
+
+def sum_array(array)
+   array.inject do |sum, n|
+      sum + n
+   end
+end
+
+def factorial(int)
+   (1..int).inject do |product, n|
+      product * n
+   end
+end
