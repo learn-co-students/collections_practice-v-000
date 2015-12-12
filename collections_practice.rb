@@ -7,8 +7,9 @@ def sort_array_desc(integers)
 end
 
 def sort_array_char_count(strings)
-  strings.collect {|string| string.insert(0,"#{string.size}")}
-  strings.sort.collect {|string| string[1..1000]}
+  size_with_string = []
+  strings.each {|string| size_with_string << [string.size, string]}
+  size_with_string.sort.collect {|size, string| string}
 end
 
 def swap_elements(array)

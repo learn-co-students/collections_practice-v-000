@@ -1,6 +1,6 @@
 require_relative '../collections_practice'
 
-print sort_array_char_count(["dogs", "cat", "horses"])
+print sort_array_char_count(["i don't like this", "cat", "horses"])
 
 print swap_elements_from_to(["a", "b", "c"],0,2) #=> ["c", "b", "a"]
 print swap_elements_from_to(["a", "b", "c"],2,1) #=> ["a", "c", "b"]
