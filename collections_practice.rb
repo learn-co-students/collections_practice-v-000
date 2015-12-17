@@ -18,8 +18,10 @@ end
 
 ## non-working method ##
 # def swap_elements_from_to(array, index, destination_index)
-#   array.sort do |a, b, index, destination_index| 
-#     a[index] <=> b[destination_index]
+#   c = index
+#   d = destination_index
+#   array.sort do |a, b| 
+#     a[c] <=> b[d]
 #   end
 # end
 
@@ -38,11 +40,7 @@ def kesha_maker(array)
 end
 
 def find_a(array)
-  array.select do |word| 
-    if word[0] == "a"
-      word
-    end
-  end
+  array.select { |word| word[0] == "a" }
 end
 
 def sum_array(array)
