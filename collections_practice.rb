@@ -38,3 +38,9 @@ end
 def sum_array(array)
 	array.inject { |sum, num| sum + num }
 end
+
+def add_s(array)
+	array.map.with_index do |word, index|
+		index != 1 ? word.insert(-1, "s") : word
+	end
+end
