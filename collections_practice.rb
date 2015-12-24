@@ -12,11 +12,11 @@ end
 
 def swap_elements(array)
   array.sort {|a, b| a[2] <=> b[1]}
-  end
+end
 
 def reverse_array(array)
   array.sort {|a, b| b[0] <=> a[2]}
-  end
+end
 
 def kesha_maker(array)
   new_array = []
@@ -29,7 +29,7 @@ end
 
 def find_a(array)
   array.select {|x| x.start_with?('a')}
-  end
+end
 
 def sum_array(array)
   array.inject{|x, y| x + y }
