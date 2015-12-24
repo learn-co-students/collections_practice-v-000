@@ -41,6 +41,6 @@ end
 
 def add_s(array)
 	array.map.with_index do |word, index|
-		index != 1 ? word.insert(-1, "s") : word
+		index == 1 ? word : word.insert(-1, "s")
 	end
 end
