@@ -29,6 +29,13 @@ describe 'collections practice' do
     end
   end
 
+  # Question 3.5
+  describe '#swap_elements_from_to' do 
+    it 'swap the elements specified by index in the method arguments' do
+      expect(swap_elements_from_to(["try","no","do","fail"],2,3)).to eq(["try","no","fail","do"])
+    end
+  end
+
   # Question 4
   describe '#reverse_array' do
     it 'reverse the order of an array' do
