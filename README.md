@@ -44,7 +44,7 @@ Build a method called `kesha_maker` that takes in an array of string elements an
 
 ## Question 7: `#find_a`
 
-Build a method `find_a` that returns all the strings in the array passed to it that `start_with?` (**hint**) the letter `"a"`. You'll want to use a high level iterator for this that finds, selects, or detects elements based on a condition.
+Build a method `find_a` that returns all the strings in the array passed to it that `start_with?` the letter `"a"`. (**Hint**) You'll want to use a high level iterator for this that finds, selects, or detects elements based on a condition.
 
 ## Question 8: `#sum_array`
 
