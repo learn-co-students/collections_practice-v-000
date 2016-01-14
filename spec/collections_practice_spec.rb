@@ -65,4 +65,10 @@ describe 'collections practice' do
       expect(add_s(["hand","feet", "knee", "table"])).to eq(["hands","feet", "knees", "tables"])
     end
   end
+
+  describe '#swap_elements_from_to' do
+    it 'Takes an index and moves it to specified index' do
+      expect(swap_elements_from_to(["a", "b", "c", "d", "e", "f"], 1, 5)).to eq(["a", "f", "c", "d", "e", "b"])
+    end
+  end
 end
