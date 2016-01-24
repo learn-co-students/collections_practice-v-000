@@ -66,3 +66,10 @@ describe 'collections practice' do
     end
   end
 end
+
+# Question Advanced 2
+  describe '#swap_elements_from_to' do
+    it 'swap the element at index and elemement at destination_index of an array' do
+      expect(swap_elements_from_to(["blake", "ashley", "scott"], 0, 2)).to eq(["scott", "ashley", "blake"])
+    end
+  end
