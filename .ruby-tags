@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+add_s	collections_practice.rb	/^def add_s(array)$/;"	f
+find_a	collections_practice.rb	/^def find_a(array)$/;"	f
+kesha_maker	collections_practice.rb	/^def kesha_maker(array)$/;"	f
+reverse_array	collections_practice.rb	/^def reverse_array(array)$/;"	f
+sort_array_asc	collections_practice.rb	/^def sort_array_asc(array)$/;"	f
+sort_array_char_count	collections_practice.rb	/^def sort_array_char_count(array)$/;"	f
+sort_array_desc	collections_practice.rb	/^def sort_array_desc(array)$/;"	f
+sum_array	collections_practice.rb	/^def sum_array(array)$/;"	f
+swap_elements	collections_practice.rb	/^def swap_elements(array)$/;"	f
