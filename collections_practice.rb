@@ -50,7 +50,6 @@ def kesha_maker(arry)
   end
 
 
-
 # that returns all the strings in the array passed to it that start_with? (hint) the letter "a"
 
 def find_a(arry)
