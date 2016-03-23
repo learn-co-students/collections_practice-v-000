@@ -11,7 +11,9 @@ def sort_array_char_count(num)
 end
 
 def swap_elements(array)
-array[0], array[1], array[2] = array[0], array[2], array[1]
+  swap = array[1]
+  array[1] = array[2]
+  array[2] = swap
 end
 
 def reverse_array(array)
@@ -29,16 +31,21 @@ def find_a(array)
 end
 
 def sum_array(array)
-  array.inject {|sum, x| sum + x}
+  sum = 0
+  array.each do |num|
+    sum += num
+  end
+  sum
 end
 
 def add_s(array)
-  array.each_with_index.collect do |word, index|
-    if index != 1
-      word + "s"
-    else
+  array.collect do |word|
+    if array[1] == word
       word
+    else
+      word + "s"
     end
   end
 end
+
 
