@@ -29,6 +29,12 @@ describe 'collections practice' do
     end
   end
 
+  describe '#swap_elements_from_to' do
+    it 'swaps any two elements in an array' do
+      expect(swap_elements_from_to(["steak", "potatoes", "wine"], 0, 1)). to eq(["potatoes", "steak", "wine"])
+    end
+  end
+
   # Question 4
   describe '#reverse_array' do
     it 'reverse the order of an array' do
