@@ -27,11 +27,22 @@ def kesha_maker(strings)
 end
 
 def find_a(strings)
-  strings.collect do |word|
+  strings.select do |word|
     word.start_with?("a")
     end
 end
 
 def sum_array(integers)
   integers.inject { |result, element| result + element }
+end
+
+def add_s(integers)
+  integers.collect do |word|
+    if integers[1] == word
+      word
+    else
+      word + "s"
+    end
+  end
+
 end
