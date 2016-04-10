@@ -36,6 +36,13 @@ describe 'collections practice' do
     end
   end
 
+  # Advance
+  # describe '#swap_elements_from_to' do
+  #   it 'takes in three arguments and swaps array index 1, and array index 2' do
+  #     expect(swap_elements_from_to(["a", "b", "c"],2,1)).to eq(["a", "c", "b"])
+  #   end
+  # end
+
   # Question 5
   describe '#kesha_maker' do
     # DO NOT USE .collect or .map. use .each to build a new array, like in the "my_each" lab!
