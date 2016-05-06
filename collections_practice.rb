@@ -49,7 +49,7 @@ def sum_array(array)
 end
 
 def add_s(array)
-	array.map! {|x|
+	array.collect {|x|
 		if (x == "hand")
 			"hands"
 		elsif (x == "feet")
