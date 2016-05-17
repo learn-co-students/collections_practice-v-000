@@ -40,8 +40,16 @@ def start_with(word, letter)
 end
 
 def find_a(array)
-  array.find_all {|x| start_with(x, "a")}
+  array.select {|x| x[0] == "a"}
 end
+
+#def find_a(array)
+ # array.select {|x| start_with(x,"a")}
+#end
+
+#def find_a(array)
+#  array.find_all {|x| start_with(x, "a")}
+#end
 
 word = "hello"
 puts word[0]
