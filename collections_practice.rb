@@ -4,7 +4,7 @@ end
 
 def sort_array_desc(array)
   array.sort.reverse
-  # array.sort { |a,b| b <=> a }
+  #array.sort { |a,b| b <=> a }
 end
 
 def sort_array_char_count(array)
@@ -27,9 +27,9 @@ end
 
 def kesha_maker(array)
   new_array = []
-  array.each do |char|
-    char[2] = '$'
-    new_array << char
+  array.each do |word|
+    word[2] = '$'
+    new_array << word
   end
   new_array
 end
@@ -37,19 +37,27 @@ end
 def find_a(array)
   array.select do |word|
     word.chr == "a"
+    # word[0] == "a"
   end
 end
 
 def sum_array(array)
   array.inject(:+)
 end
+# def sum_array(array)
+#   sum = 0
+#   array.each do |word|
+#     sum += word
+#   end
+#   sum
+# end
 
 def add_s(array)
-  array.each_with_index.map do |num, i|
-    if num[i] == num[1]
-      num
+  array.map do |word|
+    if array[1] == word
+      word
     else
-      num << "s"
+      word << "s"
     end
   end
 end
