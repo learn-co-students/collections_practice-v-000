@@ -7,7 +7,7 @@
 
 ## Instructions
 
-The goal of this lab is to become proficient manipulating arrays.  Try experimenting with the built in Ruby methods as well as implementing your own logic to solve these.  Write methods that solve each of the rspec tests.
+The goal of this lab is to become proficient at manipulating arrays.  Try experimenting with the built in Ruby methods as well as implementing your own logic to solve these.  Write methods that solve each of the rspec tests.
 
 ## Question 1: `#sort_array_asc`
 
@@ -19,7 +19,7 @@ Build a method `sort_array_desc` that takes in an array of integers and returns 
 
 ## Question 3: `#sort_array_char_count`
 
-Build a method `sort_array_char_count` that takes in an array of string and returns a copy of the array with the strings ordered in asecending order by length. Remember that `.sort` takes a block in which you can specify how you want your array sorted.
+Build a method `sort_array_char_count` that takes in an array of string and returns a copy of the array with the strings ordered in ascending order by length. Remember that `.sort` takes a block in which you can specify how you want your array sorted.
 
 ## Question 4: `#swap_elements`
 
