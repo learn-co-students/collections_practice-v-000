@@ -41,7 +41,7 @@ end
 def reverse_array(array)
   array.reverse
 end
-=begin
+
 def kesha_maker(array)
   new_array = []                                                                        
   array.each do |word|                                                        
@@ -50,7 +50,7 @@ def kesha_maker(array)
   end                                                                           
     new_array
 end
-=end
+
 def find_a(array)
   array.select do |string|
     string.start_with?("a")
