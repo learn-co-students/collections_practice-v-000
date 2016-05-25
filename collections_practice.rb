@@ -41,14 +41,22 @@ def reverse_array(array)
   array.reverse
 end
 
+def kesha_maker(array)
+  k_name = []                                                                        
+  array.each do |name|                                                        
+    name[2] = "$"                                                        
+      k_name << name                                                                  
+  end                                                                           
+    k_name
+end
+
+def find_a(array)
+  array.select do |string|
+    string.start_with?("a")
+  end
+end
+
 =begin
-def kesha_maker(strings)
-end
-
-def find_a
-end
-
-
 def sum_array
 end
 
