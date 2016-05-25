@@ -14,6 +14,7 @@ def sort_array_desc(integers)
   end
 end
 
+
 # def sort_array_asc(array)
     # array.sort.reverse
   # end
@@ -40,15 +41,27 @@ end
 def reverse_array(array)
   array.reverse
 end
-
+=begin
 def kesha_maker(array)
-  k_name = []                                                                        
-  array.each do |name|                                                        
-    name[2] = "$"                                                        
-      k_name << name                                                                  
+  new_array = []                                                                        
+  array.each do |word|                                                        
+    word[2] = "$"                                                        
+      new_array << word                                                                  
   end                                                                           
-    k_name
+    new_array
 end
+
+def kesha_maker(array) # put argument(s) here                                       
+  # code here                                                                   
+  i = 0                                                                         
+  while i < array.length                                                        
+      yield array[i]  
+      i[2] = "$"                                                         
+      i += 1                                                                    
+  end                                                                           
+    array                                                                       
+end   
+=end
 
 def find_a(array)
   array.select do |string|
@@ -56,12 +69,20 @@ def find_a(array)
   end
 end
 
-=begin
-def sum_array
+
+def sum_array(array)
+  sum = 0
+    array.each do |int|
+  sum += int
+  end
+  sum
 end
 
-
-def add_s
-  [1,2].each_with_index.collect{|element, index|}
+def add_s(array)
+  array.collect do |word|
+    if word == array[1]
+      word
+    else word + "s"
+    end
+  end
 end
-=end
