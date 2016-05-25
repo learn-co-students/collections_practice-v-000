@@ -50,19 +50,7 @@ def kesha_maker(array)
   end                                                                           
     new_array
 end
-
-def kesha_maker(array) # put argument(s) here                                       
-  # code here                                                                   
-  i = 0                                                                         
-  while i < array.length                                                        
-      yield array[i]  
-      i[2] = "$"                                                         
-      i += 1                                                                    
-  end                                                                           
-    array                                                                       
-end   
 =end
-
 def find_a(array)
   array.select do |string|
     string.start_with?("a")
