@@ -6,7 +6,7 @@ def sort_array_desc(integer_arr)
   integer_arr.sort {|x, y| y <=> x} #descending
 end
 
- def sort_array_char_count(integer_arr)
+def sort_array_char_count(integer_arr)
    #sort by length of word
    integer_arr.sort do |a, b|
      if a.length == b.length
@@ -17,10 +17,33 @@ end
        1
      end
    end
- end
+end
 
- def swap_elements(integer_arr)
-   integer_arr.sort! { |integer_arr1, integer_arr2| integer_arr[2] <=> integer_arr[0] }
+def swap_elements(integer_arr)
+   integer_arr.sort! { |integer_arr2, integer_arr0| integer_arr[2] <=> integer_arr[0] } #reverses the way it is sorted so scott replaces
+   #blake and blake goes to the end so that it can be removed later
    last = integer_arr.pop #remove the last element
    integer_arr.unshift(last)
+end
+
+def reverse_array(array)
+  array.reverse
+end
+
+def kesha_maker(string_arr)
+  	new_arr=[] #create an empty array to use later
+  	string_arr.each do | string |
+  	string[2] = "$" #replace the third character in each string with a dolar sign
+  	new_arr << string
+  end
+end
+
+def find_a(array)
+  array.find_all { |words| words[0] == "a" }
+end
+
+def sum_array(integer_arr)
+   integer_arr.collect do | integers |
+    integers += integers
+   end
 end
