@@ -20,10 +20,8 @@ def sort_array_char_count(integer_arr)
 end
 
 def swap_elements(integer_arr)
-   integer_arr.sort! { |integer_arr2, integer_arr0| integer_arr[2] <=> integer_arr[0] } #reverses the way it is sorted so scott replaces
-   #blake and blake goes to the end so that it can be removed later
-   last = integer_arr.pop #remove the last element
-   integer_arr.unshift(last)
+  integer_arr[1], integer_arr[2] = integer_arr[2], integer_arr[1] #swap the second with the third element
+  integer_arr
 end
 
 def reverse_array(array)
@@ -50,10 +48,16 @@ end
 
 def add_s(string_arr)
 	string_arr.each_with_index.collect do |string, index| #this method allows you to single out the index to control it.
-		if index !=1
+		if index !=1 #control what happens to the second string item
 		 	string + "s"
 		else
 			string
 		end
 	end
+end
+
+#advanced section
+def swap_elements_from_to(array, index, destination_index)
+   array[index], array[destination_index] = array[destination_index], array[index]
+   array
 end

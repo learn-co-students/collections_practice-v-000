@@ -66,3 +66,12 @@ describe 'collections practice' do
     end
   end
 end
+
+# advanced Question 1
+describe '#swap_elements_from_to' do
+  it 'swaps any two elements in an array' do
+    index = 0
+    destination_index = 2
+    expect(swap_elements_from_to(["1","22", "31", "11"], index, destination_index)).to eq(["31", "22", "1", "11"])
+  end
+end
