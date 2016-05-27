@@ -43,7 +43,17 @@ def find_a(array)
 end
 
 def sum_array(integer_arr)
-   integer_arr.collect do | integers |
-    integers += integers
-   end
+  sum = 0 #use this as a base to add all the integers to and not to each other
+  integer_arr.each { |integer| sum+=integer}
+  sum
+end
+
+def add_s(string_arr)
+	string_arr.each_with_index.collect do |string, index| #this method allows you to single out the index to control it.
+		if index !=1
+		 	string + "s"
+		else
+			string
+		end
+	end
 end
