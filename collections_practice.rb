@@ -39,3 +39,7 @@ def find_a(array)
       item[0] == "a" 
    end
 end
+
+def sum_array(array)
+   array.reduce(:+) 
+end
