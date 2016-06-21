@@ -29,6 +29,12 @@ describe 'collections practice' do
     end
   end
 
+  describe 'swap_elements_to_from' do
+    it 'swap the elements at the indexes provided by the user' do
+      expect(swap_elements_to_from(["billy connolly", "dave chappelle", "patton oswalt"], 0, 1)).to eq(["dave chappelle", "billy connolly", "patton oswalt"])
+    end
+  end
+
   # Question 4
   describe '#reverse_array' do
     it 'reverse the order of an array' do
