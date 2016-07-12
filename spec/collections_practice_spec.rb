@@ -29,6 +29,15 @@ describe 'collections practice' do
     end
   end
 
+  # Question 4 Advanced
+  describe '#swap_elements_from_to' do
+    it 'swap the elements of any array based on the give positions' do
+      array = %w(red orange yellow green blue indigo violet)
+      array_swapped = %w(violet orange yellow green blue indigo red)
+      expect(swap_elements_from_to(array, 1, 7)).to eq(array_swapped)
+    end
+  end
+
   # Question 4
   describe '#reverse_array' do
     it 'reverse the order of an array' do
