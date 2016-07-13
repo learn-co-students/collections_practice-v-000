@@ -40,5 +40,18 @@ def find_a(array)
 end
 
 def sum_array(array)
+    array.inject do |a,b|
+      a + b
+    end
+end
+
+def add_s(array)
+  array.collect do |a|
+    if array[1] == a
+      a
+    else
+      a + "s"
+    end
+  end
 
 end
