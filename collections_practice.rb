@@ -73,10 +73,18 @@ def find_a(string_array)
   end
 end
 
-# expect(sum_array([11,4,7,8,9,100,134])).to eq(273)
-
-def sum_array()
+def sum_array(integer_array)
+  integer_array.inject(0) { |accumulator, element| accumulator + element }
 end
 
-def add_s()
+def add_s(string_array)
+  new_array = []
+  string_array.collect.with_index do |element, index|
+    if index != 1
+      new_array << element + "s"
+    else
+      new_array << element
+    end
+  end
+  new_array
 end
