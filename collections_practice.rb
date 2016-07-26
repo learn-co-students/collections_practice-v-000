@@ -73,6 +73,8 @@ def find_a(string_array)
   end
 end
 
+# expect(sum_array([11,4,7,8,9,100,134])).to eq(273)
+
 def sum_array()
 end
 
