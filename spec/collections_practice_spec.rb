@@ -65,4 +65,10 @@ describe 'collections practice' do
       expect(add_s(["hand","feet", "knee", "table"])).to eq(["hands","feet", "knees", "tables"])
     end
   end
+
+  describe 'the advanced question' do
+    it 'Swaps the specified elements at the right indices' do
+      expect(swap_elements_from_to(%w[Efrain Perez Jr],0,2)).to eq (%w[Jr Perez Efrain])
+    end
+  end
 end
