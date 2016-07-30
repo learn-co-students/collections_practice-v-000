@@ -29,6 +29,13 @@ describe 'collections practice' do
     end
   end
 
+  # Question 3.5
+  describe '#swap_elements_from_to' do
+    it 'allows you to specify the index of the element you would like to move into a new index' do
+      expect(swap_elements_from_to(["a", "b", "c"],0,2)).to eq(["c", "b", "a"])
+    end
+  end
+
   # Question 4
   describe '#reverse_array' do
     it 'reverse the order of an array' do
