@@ -69,9 +69,11 @@ end
 def kesha_maker(arr)
   new_arr = []
   arr.each do |str|
-    char_arr = str.chars
-    char_arr[2] = "$"
-    new_arr << char_arr.join
+    str[2] = "$"
+    new_arr << str
+    # char_arr = str.chars
+    # char_arr[2] = "$"
+    # new_arr << char_arr.join
   end
   new_arr
 end
