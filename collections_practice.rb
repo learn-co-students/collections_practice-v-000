@@ -1,53 +1,57 @@
-def sort_array_asc(array)
-	array.sort
+def sort_array_asc(integers)
+	integers.sort
 end
 
-def sort_array_desc(array)
-    array.sort.reverse
-end	
+def sort_array_desc(integers)
+	integers.sort do |a, b|
+		b <=> a
+	end
+end
 
-def sort_array_char_count(array)
-    array.sort
+def sort_array_char_count(strings)
+	strings.sort do |a, b|
+		a.length <=> b.length
+	end
 end
 
 def swap_elements(array)
-	swap = array[1]
-	array[1] = array[2]
-	array[2] = swap
-	array
+  swap = array[1]
+  array[1] = array[2]
+  array[2] = swap
+
+  array
 end
 
-
 def reverse_array(array)
-    array.reverse
+	array.reverse
 end
 
 def kesha_maker(array)
-    keshawords = []
-    array.each do |word| 
-      word[2] = "$"
-      keshawords << word
-    end
-    keshawords
+	array.each do |item|
+		item[2] = "$"
+	end
 end
 
 def find_a(array)
-    array.select { |words| words.start_with?("a") }
+	array.find_all do |item|
+		item.start_with?("a")
+	end
 end
 
 def sum_array(array)
 	sum = 0
-	array.each {|int| sum += int }
+	array.each do |int|
+		sum += int
+	end
 	sum
 end
 
-def add_s(arr)
-    arr.collect do |word|
-    if arr[1] == word
-      word
+def add_s(array)
+   array.each_with_index.map do |word, i|
+    if i == 1
+    	word
     else
-      word + "s" 
-    end
+   	  word + "s"
   end
+ end
 end
-
