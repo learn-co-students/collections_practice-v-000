@@ -18,9 +18,11 @@ def swap_elements(array)
 end
 
 def reverse_array(array)
-  array.sort do |a, b|
-    b.length <=> a.length
+  array2 = []
+  array.length.times do
+    array2 << array.pop
   end
+  array2
 end
 
 def kesha_maker(array)
