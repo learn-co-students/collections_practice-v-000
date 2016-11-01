@@ -26,7 +26,12 @@ def swap_elements_from_to(array, index, destination_index)
 end
 
 def reverse_array(array)
-  array.reverse
+  # could just do this:
+  # array.reverse
+  # but I'll do it a longer way because it's more fun:
+  array2 = []
+  array.length.times { array2 << array.pop }
+  array = array2
 end
 
 def kesha_maker(array)
