@@ -59,8 +59,8 @@ end
 
 
 def add_s(array)
-  array.each do |member|
-    if array.index(member) != 1
+  array.each do |name|
+    if array.index(name) != 1
       member << "s"
     end
   end
