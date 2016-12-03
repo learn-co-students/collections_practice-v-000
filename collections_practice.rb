@@ -19,15 +19,19 @@ def reverse_array(array)
   array.reverse
 end
 
-def kesha_maker(array)
-  array.each do |item|
-    if item.length < 3
-      item
-    else
-      item[2] = '$'
-    end
-  end
+def kesha_maker(names)
+	kesha_array = []
+	names.each do |element|
+		if element.length < 3
+			element
+		else
+			element[2] = '$'
+		end
+		kesha_array << element
+	end
+	kesha_array
 end
+
 
 def find_a(array)
   array.select {|item| item.start_with?('a') or item.start_with?('A')}
@@ -40,11 +44,11 @@ def sum_array(array)
 end
 
 def add_s(array)
-	array.each_with_index.map do |element,index|
-		if index == 1
-			element
-		else
-			element + 's'
-		end
-	end
+  array.each_with_index.map do |val, index|
+    if index == 1
+      val
+    else
+      val+='s'
+    end
+  end
 end
