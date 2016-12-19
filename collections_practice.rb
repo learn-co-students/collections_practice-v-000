@@ -19,3 +19,14 @@ end
 def reverse_array(integers)
 integers.reverse
 end
+
+def kesha_maker(string)
+end
+
+def find_a(string)
+string.select{|i| i.start_with? "a"}
+end
+
+def sum_array(integers)
+  integers.inject(0){|sum,x| sum + x}
+end
