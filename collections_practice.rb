@@ -33,6 +33,15 @@ def sum_array(integers)
 end
 
 def add_s(string)
-  string.each_with_index.collect do |part, index|
+  string.map.with_index do |part, index|
+    if index==1
+      "#{part}"
+    else
+      "#{part}s"
+    end
   end
+  end
+
+  [3,3,3].map.with_index do |element, index|
+    element + index
   end
