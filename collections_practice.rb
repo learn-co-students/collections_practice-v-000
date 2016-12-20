@@ -30,3 +30,9 @@ end
 def sum_array(integers)
   integers.inject(0){|sum,x| sum + x}
 end
+
+def add_s(string)
+  string.each_with_index.collect do |part, index|
+  "#{part}s"
+  end
+  end
