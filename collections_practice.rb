@@ -21,7 +21,8 @@ integers.reverse
 end
 
 def kesha_maker(string)
-end
+  string.select {|word| word[2]="$"}
+  end
 
 def find_a(string)
 string.select{|i| i.start_with? "a"}
@@ -33,6 +34,5 @@ end
 
 def add_s(string)
   string.each_with_index.collect do |part, index|
-  "#{part}s"
   end
   end
