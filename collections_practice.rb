@@ -49,24 +49,15 @@ end
 #build a method `find_a` that returns all the strings 
 #in the array passed to it that `start_with?` (**hint**) the letter `"a"`.
 def find_a(array)
-  n = array.length
-  i = 0
-  new_a_array = [] # to start a collection
-  while i < n #counter is less than length of array do the following
-    array.select do |item| 
+  new_a_array = []
+  array.select do |item| 
       #binding.pry
-      item_length= item.length
-      i = 0
-      while i< item_length 
         if item[0]=="a"
         new_a_array<< item
         else
         puts "nil"
         end
-      end
-      i= i + 1
-      end
-  end
+    end
 new_a_array
 end
 
