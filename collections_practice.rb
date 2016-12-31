@@ -70,7 +70,7 @@ def add_s(array)
   array_length = array.length
   i = 0 # starts counter
   while i < array_length
-    binding.pry
+    #binding.pry
   array.each_with_index.map {|item, index|
     #binding.pry
     i = 0
@@ -87,5 +87,6 @@ def add_s(array)
   end
   i = i + 1
   array
+  #still need to delete "s" from the 2nd element of the array
 end
 
