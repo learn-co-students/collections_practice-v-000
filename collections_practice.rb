@@ -50,8 +50,8 @@ end
 #in the array passed to it that `start_with?` (**hint**) the letter `"a"`.
 def find_a(array)
   new_a_array = []
+  #binding.pry
   array.select do |item| 
-      #binding.pry
         if item[0]=="a"
         new_a_array<< item
         else
@@ -60,8 +60,28 @@ def find_a(array)
     end
 new_a_array
 end
-
-
-  
-
+#
+#http://blog.jayfields.com/2008/03/ruby-inject.html
+def sum_array(array)
+  array.inject {|result, element| result + element }
+end
+#
+def add_s(array)
+  array_length = array.length
+  i = 0 # starts counter
+  while i < array_length
+    #binding.pry
+  array.each_with_index.map {|item, index|
+    binding.pry
+    item_length = item.length
+      while index < item_length
+      #  index[1] == 1
+      #item_length=item.length#need item.length?
+      item[-1]=item[-1].push("s")
+      #binding.pry
+      #binding.pry
+      end
+  }
+  end
+end
 
