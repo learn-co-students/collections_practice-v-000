@@ -28,12 +28,12 @@ def kesha_maker(array)
   n1 = array.length
   i = 0
   while i < n1
-  array.each do |item| 
+  array.each do |item|
     #binding.pry
     n= item.length
     #binding.pry
     i = 0
-    while i < n 
+    while i < n
       #binding.pry
       item[2] = item[2].replace ("$")
       #binding.pry
@@ -41,17 +41,17 @@ def kesha_maker(array)
     end
     array
     #binding.pry
-    end 
+    end
   end
     return array
 end
 #http://stackoverflow.com/questions/31654885/change-every-nth-letter-in-an-array
-#build a method `find_a` that returns all the strings 
+#build a method `find_a` that returns all the strings
 #in the array passed to it that `start_with?` (**hint**) the letter `"a"`.
 def find_a(array)
   new_a_array = []
   #binding.pry
-  array.select do |item| 
+  array.select do |item|
         if item[0]=="a"
         new_a_array<< item
         else
@@ -67,26 +67,21 @@ def sum_array(array)
 end
 #
 def add_s(array)
-  array_length = array.length
-  i = 0 # starts counter
-  while i < array_length
-    #binding.pry
-  array.each_with_index.map {|item, index|
-    #binding.pry
-    i = 0
-    item_length = item.length
-      while index < item_length
-      #  index[1] == 1
-      #item_length=item.length#need item.length?
-      item[-1]= item[-1] + "s"
-      binding.pry
-      #binding.pry
+#array_length= array.length
+#i = 0
+#while i < array.length
+      array.each_with_index do |item, index|
+      if index != 1
+        array[index] = item + "s"
+        # lesson: access the item via instance variable
+        #array[index]
+      else
+        puts " "
       end
-      i = i + 1
-  }
-  end
-  i = i + 1
-  array
-  #still need to delete "s" from the 2nd element of the array
-end
+    end
 
+#    i = i + 1
+#    binding.pry
+#end
+array
+end
