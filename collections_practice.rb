@@ -71,16 +71,18 @@ def add_s(array)
   i = 0 # starts counter
   while i < array_length
     #binding.pry
-  array.each_with_index.map {|item, index|
-    binding.pry
+  array.each_with_index {|item, index|
+    #binding.pry
+    i = 0
     item_length = item.length
       while index < item_length
       #  index[1] == 1
       #item_length=item.length#need item.length?
       item[-1]=item[-1].push("s")
-      #binding.pry
+      binding.pry
       #binding.pry
       end
+      i = i + 1
   }
   end
   array
