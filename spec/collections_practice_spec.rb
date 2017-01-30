@@ -29,6 +29,15 @@ describe 'collections practice' do
     end
   end
 
+  describe '#swap_elements_from_to(array, index, destination_index)' do
+    it 'swaps the element from given index with the element at destination index' do
+      expect(swap_elements_from_to(["Burgers", "Tacos", "Pizza"], 0, 2)).to eq(["Pizza", "Tacos", "Burgers"])
+    end
+    it 'returns rejection string if array length is smaller than destination_index' do
+      expect(swap_elements_from_to(["Burgers", "Pizza"], 0, 2)).to eq("Your array is too short. I can't let you do that, starfox!")
+    end
+  end
+
   # Question 4
   describe '#reverse_array' do
     it 'reverse the order of an array' do
