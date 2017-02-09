@@ -28,9 +28,12 @@ end
 def kesha_maker(strings)
   keshad = []
   strings.each do |i|
-    word = i.value.split("")
-    binding.pry
+    word = i.split("")
+    word[2] = "$"
+    keshad << word.join
+    # binding.pry
   end
+  return keshad
 end
 
 def find_a(strings)
