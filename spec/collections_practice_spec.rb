@@ -16,16 +16,24 @@ describe 'collections practice' do
     end
   end
 
+  # Question 3
   describe '#sort_array_char_count' do
     it 'should return an array in ascending order sorted by the number of characters in the string' do
       expect(sort_array_char_count(["dogs", "cat", "horses"])).to eq(["cat", "dogs", "horses"])
     end
   end
 
-  # Question 3
+  # Question 4
   describe '#swap_elements' do
     it 'swap the second and third elements of an array' do
       expect(swap_elements(["blake", "ashley", "scott"])).to eq(["blake", "scott", "ashley"])
+    end
+  end
+
+  #Question 4 Advanced
+  describe '#swap_elements_from_to' do
+    it 'swap the specified elements of an array' do
+      expect(swap_elements_from_to(["blake", "ashley", "scott"],0,2)).to eq(["scott", "ashley", "blake"])
     end
   end
 
