@@ -3,21 +3,11 @@ def sort_array_asc(array)
 end
 
 def sort_array_desc(array)
-  array.sort do |a, b|
-    if a == b
-      0
-    elsif a < b
-      1
-    elsif a > b
-      -1
-    end
-  end
+  array.sort {|a, b| b <=> a }
 end
 
 def sort_array_char_count(array)
-  array.sort do |a, b|
-    a.size <=> b.size
-  end
+  array.sort {|a, b| a.size <=> b.size }
 end
 
 def swap_elements(array)
@@ -44,15 +34,11 @@ def kesha_maker(array)
 end
 
 def find_a(array)
-  array.select do |str|
-    str.start_with?("a")
-  end
+  array.select {|str| str.start_with?("a") }
 end
 
 def sum_array(array)
-  array.inject(0) do |sum, i|
-    sum + i
-  end
+  array.inject(0) {|sum, i| sum + i }
 end
 
 def add_s(array)
