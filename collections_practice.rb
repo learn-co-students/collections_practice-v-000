@@ -2,7 +2,7 @@ array = [25, 2, 5, 30]
 
 def sort_array_asc(array)
   sorted_asc = array.sort  # sorts array in ascending order
-  sorted_asc  # .inspect  # return new array => [2, 5, 25, 30]
+  sorted_asc  # .inspect  # returns new array => [2, 5, 25, 30]
 end
 
 sort_array_asc(array)
