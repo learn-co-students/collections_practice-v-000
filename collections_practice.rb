@@ -29,8 +29,18 @@ end
 
 def sum_array(array)
   sum = 0
-  array.each do |num|
-    sum+=num
-  end
+  array.each {|num|sum+=num}
   sum
 end
+
+def add_s(array)
+  array.each_with_index do |word, index|
+    if array[1] == word
+      word
+    else
+      puts "#{index}. #{word}s"
+    end
+  end
+end
+
+# array.each.with_index(1) {|name, index| puts "#{index}. #{name}"}
