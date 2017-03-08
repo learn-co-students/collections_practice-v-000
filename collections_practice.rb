@@ -22,3 +22,15 @@ end
 def kesha_maker(array)
   array.each {|item|item[2] = "$"}
 end
+
+def find_a(array)
+  array.select { |string| string[0] == "a"}
+end
+
+def sum_array(array)
+  sum = 0
+  array.each do |num|
+    sum+=num
+  end
+  sum
+end
