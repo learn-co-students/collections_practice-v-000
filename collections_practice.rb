@@ -32,6 +32,16 @@ def find_a(array)
   starts_with_a
 end
 
+=begin
+Refactored #find_a
+
+def find_a(array)
+  a_words = []
+  array.map {|x| a_words << x if x.start_with?("a")}
+  a_words
+end
+=end
+
 def sum_array(array)
   array.reduce(:+)
 end
