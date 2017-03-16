@@ -29,6 +29,30 @@ describe 'collections practice' do
       expect(swap_elements(["blake", "ashley", "scott"])).to eq(["blake", "scott", "ashley"])
     end
   end
+  # Question 4.1
+  describe '#swap_elements_from_to' do
+    it 'swap two elements of an array' do
+      expect(swap_elements_from_to(["a", "b", "c", "d"], 0, 2)).to eq(["c", "b", "a", "d"])
+    end
+  end
+  # Question 4.2
+  describe '#swap_elements_from_to' do
+    it 'swap two elements of an array' do
+      expect(swap_elements_from_to(["a", "b", "c", "d"], 3, 1)).to eq(["a", "d", "c", "b"])
+    end
+  end
+  # Question 4.3
+  describe '#swap_elements_from_to' do
+    it 'swap two elements of an array' do
+      expect(swap_elements_from_to(["a", "b", "c", "d"], 2, 2)).to eq(["a", "b", "c", "d"])
+    end
+  end
+  # Question 4.4
+  describe '#swap_elements_from_to' do
+    it 'swap two elements of an array' do
+      expect(swap_elements_from_to(["a", "b", "c", "d"], 5, 2)).to eq("Incorrect index: check parametres value")
+    end
+  end
 
   # Question 5
   describe '#reverse_array' do
