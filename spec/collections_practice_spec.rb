@@ -31,7 +31,7 @@ describe 'collections practice' do
   end
 
   # Question 4 - Advance #2
-  describe '#swap_elements' do
+  describe '#swap_elements_from_to' do
     it 'swap two element specifying the indexes of an array' do
       expect(swap_elements_from_to(["a", "b", "c"],0,2)).to eq(["c", "b", "a"])
     end
