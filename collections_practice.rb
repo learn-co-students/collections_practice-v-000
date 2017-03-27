@@ -13,6 +13,23 @@ def swap_elements(array)
   swap_array<<array[2]
   swap_array<<array[1]
 end
+
+def swap_elements_from_to(array, origin_index, destination_index)
+
+array.each_with_index.collect do |item, index| 
+  if index==origin_index 
+    item=array[destination_index]
+  elsif index==destination_index
+    item=array[origin_index]
+  else
+    item
+  end
+    
+  #index==origin_index?array[destination_index]:array[index]
+  #index==destination_index?array[origin_index]:array[index]
+end
+end
+
 def reverse_array(array)
   i=0
   reverse_array=[]
@@ -41,7 +58,4 @@ end
 def add_s(array)
   array.each_with_index.collect{|item,index| index!=1? item+"s":item}
 
-end
-def swap_elements_from_to(array, index, destination_index)
-  
 end
