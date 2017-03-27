@@ -42,3 +42,6 @@ def add_s(array)
   array.each_with_index.collect{|item,index| index!=1? item+"s":item}
 
 end
+def swap_elements_from_to(array, index, destination_index)
+  
+end
