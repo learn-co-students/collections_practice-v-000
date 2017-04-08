@@ -11,16 +11,12 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
-	temp_holder = array[1]
-	array[1] = array[2]
-	array[2] = temp_holder
+	array[1], array[2] = array[2], array[1]
 	array
 end
 
 def swap_elements_from_to(array, index, destination_index)
-	temp_holder = array[destination_index]
-	array[destination_index] = array[index]
-	array[index] = temp_holder
+	array[index], array[destination_index] = array[destination_index], array[index]
 	array
 end
 
@@ -29,9 +25,8 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-	array.map do |name| 
-		name[2] = "$"
-		name 
+	array.each do |name| 
+		name[2] = "$" 
 	end
 end
 
