@@ -47,9 +47,20 @@ def sum_array(array)
   array.reduce(0,:+)
 end
 
+=begin
 def add_s(array)
   array.map do |word|
     if word != array[1]
+      word += 's'
+    else word
+    end
+  end
+end
+=end
+
+def add_s(array)
+  array.each_with_index.map do |word, index|
+    if index != 1
       word += 's'
     else word
     end
