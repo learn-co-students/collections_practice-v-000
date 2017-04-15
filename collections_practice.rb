@@ -16,6 +16,17 @@ def swap_elements(arr)
   arr.insert(1,arr.delete_at(2))
 end
 
+# solution
+def swap_elements(array)
+  array[1], array[2] = array[2], array[1]
+  array
+end
+
+def swap_elements_from_to(arr, index, destination_index)
+  arr[destination_index], arr[index] = arr[index], arr[destination_index]
+  arr
+end
+
 def reverse_array(arr)
   arr.reverse
 end
@@ -30,6 +41,14 @@ end
 
 def find_a(arr)
   arr.select {|str| str[0] == "a"}
+end
+
+# Alternative
+
+def find_a(array)
+  array.find_all do |word|
+    word[0] == "a"
+  end
 end
 
 def sum_array(arr)
