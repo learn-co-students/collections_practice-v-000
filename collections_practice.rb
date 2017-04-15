@@ -27,7 +27,10 @@ end
 # end
 def reverse_array(array)
 reversed_array = []
-index = array.length
-while index >= 0
-  reversed_array.push(array[index])
+index = array.length - 1
+  while index >= 0
+    reversed_array.push(array[index])
+    index -= 1
+  end
+reversed_array
 end
