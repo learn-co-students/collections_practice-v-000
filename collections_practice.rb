@@ -26,13 +26,18 @@ def reverse_array(position)#5
 end
 
 def kesha_maker(words) #6
-  words.each do |val, index|
-    x.replaces
+  arr = []
+  words.each do |val|
+    val[2] = "$"
+    arr << val
   end
+  arr
 end
 
+def find_a(words) #7
+  arr.select {|str| str.start_with?("a")}
+end
 
-
-def find_a() #7
-
+def sum_array (sum)
+  sum.inject(0) {|total,x| total + x}
 end
