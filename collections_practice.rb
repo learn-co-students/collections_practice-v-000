@@ -37,11 +37,34 @@ end
 # #create a method that takes in an array of
 # #strings and replaces the 3rd charecter in each string with a $- Ke$sha style.
 def kesha_maker(array)
-  # array.replace[2].push($)
   kesha_array = []
   i = 0
   array.each do |name|
-  
-
+    kesha_array.push(name[2] = "$")
+  end
 end
+
+def find_a(array)
+a_array = []
+  array.each do |item|
+    if item.start_with?("a")
+      a_array.push(item)
+    end
+  end
+  a_array
+end
+
+def sum_array(array)
+    array.inject { |sum, i| sum + i}
+end
+
+
+def add_s(array)
+array.each_with_index.collect {|element,index|
+  if index != 1
+    element = element + "s"
+  else
+     element
+  end
+  }
 end
