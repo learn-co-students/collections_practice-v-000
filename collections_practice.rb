@@ -26,12 +26,8 @@ def reverse_array(position)#5
 end
 
 def kesha_maker(words) #6
-  arr = []
-  words.each do |val|
-    val[2] = "$"
-    arr << val
-  end
-  arr
+  words[1], words[2] = words[2], words[1]
+  words
 end
 
 def find_a(words) #7
