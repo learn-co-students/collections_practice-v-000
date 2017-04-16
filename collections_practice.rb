@@ -37,3 +37,7 @@ end
 def sum_array (sum)
   sum.inject(0) {|total,x| total + x}
 end
+
+def add_s(add)
+  add.each_with_index.collect{|element, index| element.last}
+end
