@@ -18,7 +18,6 @@ def swap_elements(array)
   array[2] = aux
   array
 end
-
 # def swap_elements_flex(array, index, destination_index)
 #   aux = array[index]
 #   array[index] = array[destination_index]
@@ -33,4 +32,16 @@ index = array.length - 1
     index -= 1
   end
 reversed_array
+end
+#
+# #create a method that takes in an array of
+# #strings and replaces the 3rd charecter in each string with a $- Ke$sha style.
+def kesha_maker(array)
+  # array.replace[2].push($)
+  kesha_array = []
+  i = 0
+  array.each do |name|
+  
+
+end
 end
