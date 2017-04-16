@@ -14,11 +14,8 @@ def sort_array_char_count(words)#3
 end
 
 def swap_elements(words)#4
-  arr = []
-  words.each_with_each do |val, index|
-    arr << val[1], val[2] = val[2], val[1]
-  end
-  arr
+     words[1], words[2] = words[2], words[1]
+     words
 end
 
 def reverse_array(position)#5
