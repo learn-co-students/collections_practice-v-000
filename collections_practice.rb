@@ -39,5 +39,13 @@ def sum_array (sum)
 end
 
 def add_s(add)
-  add.each_with_index.collect{|element, index| element.last}
+  arr = []
+  add.collect do |elem|
+    if elem == add[1]
+      arr << add[1]
+    else
+      arr << elem + "s"
+    end
+  end
+  arr
 end
