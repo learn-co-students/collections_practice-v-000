@@ -14,8 +14,13 @@ def sort_array_char_count(words)#3
 end
 
 def swap_elements(words)#4
+<<<<<<< HEAD
      words[1], words[2] = words[2], words[1]
      words
+=======
+  words[1], words[2] = words[2], words[1]
+  words
+>>>>>>> 33060bcd840bc3317de447cda3236d337be44488
 end
 
 def reverse_array(position)#5
@@ -23,6 +28,7 @@ def reverse_array(position)#5
 end
 
 def kesha_maker(words) #6
+<<<<<<< HEAD
   arr = []
     words.each do |val|
     val[2] = "$"
@@ -48,4 +54,15 @@ def add_s(add)
     end
   end
   arr
+=======
+  words.each do |val, index|
+
+  end
+end
+
+
+
+def find_a() #7
+
+>>>>>>> 33060bcd840bc3317de447cda3236d337be44488
 end
