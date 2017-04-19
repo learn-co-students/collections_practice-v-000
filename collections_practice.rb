@@ -13,5 +13,8 @@ end
 def swap_elements(array)
   new_array = array.pop
   swapped_array = array.insert(-2, new_array)
+end
 
+def reverse_array(integers)
+    integers.reverse 
 end
