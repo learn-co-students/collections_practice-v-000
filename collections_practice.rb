@@ -28,5 +28,16 @@ end
 
 def find_a(strings)
     strings.select {|string| string.start_with?("a")}
+end
 
+def sum_array(integers)
+    integers.inject {|x, y| x + y }
+end
+
+def add_s(array)
+    array.each_with_index do |word, index|
+      if index != 1
+        word << "s"
+      end
+    end
 end
