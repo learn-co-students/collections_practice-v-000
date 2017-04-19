@@ -16,5 +16,12 @@ def swap_elements(array)
 end
 
 def reverse_array(integers)
-    integers.reverse 
+    integers.reverse
+end
+
+def kesha_maker(strings)
+    strings.each do |string|
+      string.slice(2)
+      .insert(2, "$")
+    end
 end
