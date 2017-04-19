@@ -34,5 +34,21 @@ new_array = []
 end
 
 def find_a(array)
-  
+  array.select do |a|
+    a.start_with?("a")
+  end
+end
+
+def sum_array(array)
+array.inject{|a , b| a + b}
+end
+
+def add_s(array)
+  array.each_with_index.collect do |element, index|
+    if index == 1
+      element
+    else
+     element << "s"
+    end
+  end
 end
