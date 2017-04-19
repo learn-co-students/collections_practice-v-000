@@ -21,7 +21,7 @@ end
 
 def kesha_maker(strings)
     strings.each do |string|
-      string.slice(2)
-      .insert(2, "$")
+      string.slice!(2)
+      string.insert(2, "$")
     end
 end
