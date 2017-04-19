@@ -25,3 +25,8 @@ def kesha_maker(strings)
       string.insert(2, "$")
     end
 end
+
+def find_a(strings)
+    strings.select {|string| string.start_with?("a")}
+
+end
