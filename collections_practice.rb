@@ -28,7 +28,7 @@ def reverse_array (array)
 def kesha_maker(array)
   names = []
   array.each do |name|
-    names << name.sub(name[2],"$") #.sub replace the third character in each string, which is indexed at 2,with the $ sign
+    names << name.sub(name[2],"$") #.sub replaces the third character in each string, which is indexed at 2,with the $ sign
  end
 names
 end
