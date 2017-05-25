@@ -31,13 +31,16 @@ def find_a(array)
 end
 
 def sum_array(array)
-  sum = 0
-  array.each { |num| sum+= num }
-  sum
+  array.inject { |sum, num| sum + num }
 end
 
 def add_s(array)
-  array.map do |element|
-    element == array[1] ? element : element + "s"
+  array.each_with_index.collect do |element, index|
+    index == 1 ? element : element + "s"
   end
+end
+
+def swap_elements_from_to(array, index, destination_index)
+  array[destination_index], array[index] = array[index], array[destination_index]
+  array
 end
