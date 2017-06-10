@@ -52,8 +52,6 @@ def sum_array(array)
 end
 
 def add_s(array)
-  #adds s to each word in teh array to make it plural, except the second elements
-  #advanced - try chaining .each_with_index and .collect
   array.each_with_index.collect do |word, index|
     if index != 1
       word + "s"
