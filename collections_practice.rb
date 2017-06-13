@@ -8,21 +8,13 @@ end
 
 def sort_array_char_count(array)
   array.sort do |a, b|
-    if a.size == b.size
-      0
-    elsif a.size > b.size
-      1
-    elsif a.size < b.size
-      -1
-    end
+    a.size <=> b.size
   end
 end
 
 def swap_elements(array)
-  array.collect do
-    array.insert(1, "#{array[2]}").delete_at(3)
-      return array
-  end
+  array[1], array[2] = array[2], array[1]
+  array
 end
 
 def reverse_array(array)
@@ -30,15 +22,7 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-i = 0
-new_array = []
-while i < array.length
-  array.each do |string|
-    new_array << string.insert(2, "$").delete!(string[3])
-    i += 1
-    end
-    return new_array
-  end
+  array.each{|element| element[2] = "$"}
 end
 
 def find_a(array)
