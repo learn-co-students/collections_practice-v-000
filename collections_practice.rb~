@@ -9,6 +9,7 @@ end
 
 def sort_array_char_count (arr)
   arr.sort { |a, b| a.size <=> b.size }
+  #this also works: sort_by { |word| [word.size, word] }
 end
 
 def swap_elements_from_to (arr, i, destination_i)
@@ -35,6 +36,7 @@ end
 def find_a (arr)
   a_words = []
   arr.collect { |letter| letter.start_with?('a') ? a_words << letter : nil }
+  #this also works: arr.collect { |letter| letter.chars.first == 'a' ? a_words << letter : nil }
   a_words
 end
 
@@ -44,5 +46,6 @@ def sum_array (arr)
 end
 
 def add_s (arr)
+  #this also works: arr.collect {|word| arr[1] == word ? word : word + 's' }
   arr.each_with_index.collect { |word, index| index != 1 ? word + "s" : word }
 end
