@@ -60,19 +60,15 @@ def sum_array(array)
   array.inject { |a, b| a + b}
 end
 
-# def add_s(array)
-#   array.each_with_index.collect do |name, index|
-#     if index != 1
-#       name << "s"
-#     else
-#       name
-#     end
-#   end
-# end
-
 def add_s(array)
   array.each_with_index.collect do |name, index|
-    name << "s" if index != 1
+      index != 1 ? name << "s" : name
   end
-  array
 end
+
+# def add_s(array)
+#   array.each_with_index.collect do |name, index|
+#     name << "s" if index != 1
+#   end
+#   array
+# end
