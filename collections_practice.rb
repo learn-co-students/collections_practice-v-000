@@ -1,3 +1,4 @@
+require "pry"
 
 def sort_array_asc(integers)
   integers.sort do |a,b|
@@ -25,14 +26,29 @@ def reverse_array(int)
   int.reverse
 end
 
-def kesha_maker(string)
-  new_string = []
-  word = []
-  new_string.collect do |word| word << string.split("")
-  word << string[0][2] ="$"
-  # new_string.each do |word| new_string << word[2] = "$"
-  # new_string[0][2]="$"
+def kesha_maker(array)
+  new_array = []
+  array.each do |word|
+    word[2] = '$'
+    new_array << word
+  end
+  new_array
 end
-  # new_string
-  word
+
+def find_a(array)
+    array.select do |word|
+    word.start_with?("a")
+  end
+end
+
+def sum_array(array)
+  array.inject(0) {|sum, i| sum+i}
+end
+
+def add_s(array)
+  array.collect.each_with_index {|element, index| if array[1] == element
+    element
+  else
+    element+"s"
+  end }
 end
