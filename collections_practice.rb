@@ -35,7 +35,14 @@ end
 def kesha_maker(string_array)
   kesha_array = Array.new
   string_array.each {|string| kesha_array.push(string)}
-  #kesha_array.collect {|string| kesha_array.insert(2,"s")}
-  puts "help"
-  binding.pry
+  kesha_array.collect {|string| string.insert(2, '$')}
+  kesha_array.each {|string| string.slice!(3)}
+end
+
+def find_a(string_array)
+  string_array.delete_if {|string| string.slice(0) != "a" }
+end
+
+def sum_array(integer_array)
+  integer_array.sum
 end
