@@ -46,3 +46,9 @@ end
 def sum_array(integer_array)
   integer_array.sum
 end
+
+def add_s(string_array)
+  string_array.collect {|string| string.concat('s')}
+  string_array.delete_at(1)
+  string_array.insert(1, "feet")
+end

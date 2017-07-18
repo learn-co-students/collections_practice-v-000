@@ -20,3 +20,10 @@ array.sort {|a, b| a.length <=> b.length}
 array.sort {|a, b| a <=> b}
 array = ["Horses", "cat", "dogs"]
 array.sort {|a, b| b <=> a}
+
+def find_a(string_array)
+  a_array = Array.new
+  string_array.each {|string| a_array.push(string)}
+  a_array.collect {|string| string.slice!(0)}
+  binding.pry
+end
