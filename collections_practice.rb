@@ -1,5 +1,5 @@
 def sort_array_asc(array)
-  array.sort {|a, b| a<=>b}
+  array.sort
 end
 
 def sort_array_desc(array)
@@ -29,7 +29,7 @@ def find_a(array)
 end
 
 def sum_array(array)
-  array.inject {|sum,n| sum + n}
+  array.inject (:+)
 end
 
 def add_s(array)
