@@ -50,3 +50,13 @@ end
 def sum_array(array)
 	array.reduce(:+)
 end
+
+def add_s(array)
+	array.each_with_index do |e, i|
+		if i == 1
+			e = e
+		else
+			e << "s"
+		end
+	end
+end
