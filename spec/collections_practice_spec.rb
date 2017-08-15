@@ -30,6 +30,13 @@ describe 'collections practice' do
     end
   end
 
+  # Question 4 bonus
+  describe '#swap_elements_from_to' do
+    it 'swaps two elements with the given indices' do
+      expect(swap_elements_from_to(["Maine", "New Hampshire", "Massachusetts", "Rhode Island", "Connecticut", "New York", "New Jersey"],2,5)).to eq(["Maine", "New Hampshire", "New York", "Rhode Island", "Connecticut", "Massachusetts", "New Jersey"])
+    end
+  end
+
   # Question 5
   describe '#reverse_array' do
     it 'reverse the order of an array' do
