@@ -7,28 +7,18 @@ def sort_array_desc(arr)
 end
 
 def sort_array_char_count(arr)
-  arr.sort do |a, b|
-    if a.length == b.length
-      0
-    elsif a.length < b.length
-      -1
-    elsif a.length > b.length
-      1
-    end
+  arr.sort do |left, right|
+    left.length <=> right.length
   end
 end
 
 def swap_elements(arr) #swaps second and third elem
-  temp = arr[2]
-  arr[2] = arr[1]
-  arr[1] = temp
+  arr[1],arr[2] = arr[2],arr[1]
   arr
 end
 
 def swap_elements_from_to(arr,index,destination_index)
-  temp = arr[index]
-  arr[index] = arr[destination_index]
-  arr[destination_index] = temp
+  arr[index],arr[destination_index] = arr[destination_index], arr[index]
   arr
 end
 
@@ -37,18 +27,14 @@ def reverse_array(arr)
 end
 
 def kesha_maker(words)
-  dollar_signed_words = []
   words.each do |word|
-    word_array = word.split('')
-    word_array[2] = '$'
-    dollar_signed_words << word_array.join
+    word[2] = '$'
   end
-  dollar_signed_words
 end
 
 def find_a(words)
   words.select do |word|
-    word.split('').first == 'a'
+    word[0] == 'a'
   end
 end
 
@@ -57,7 +43,7 @@ def sum_array(arr)
 end
 
 def add_s(words)
-  pluralized_words = words.each_with_index.collect do |word, i|
+  words.each_with_index.collect do |word, i|
     if i != 1
       "#{word}s"
     else
