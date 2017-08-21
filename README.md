@@ -65,3 +65,7 @@ Build a method that adds an `"s"` to each word in the array except for the secon
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/collections_practice'>Sorting Lab</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/collections_practice'>Sorting Lab</a> on Learn.co and start learning to code for free.</p>
+
+values = ["a", "b", "c"]
+values.sort! {|x, y| y <=> x}
+puts values.to_s
