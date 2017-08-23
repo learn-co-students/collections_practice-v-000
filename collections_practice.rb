@@ -86,6 +86,9 @@ def sum_array(arr)
 end
 
 #Build a method that adds an "s" to each word in the array except for the second element in the array ("feet" is already plural).
+=begin
+
+//FIRST ITERATION//
 
 def add_s(arr)
   arr.each do |x|
@@ -93,4 +96,18 @@ def add_s(arr)
       x << "s"
     end
   end
+end
+
+=end
+
+#Advanced: Iterators in Ruby are chainable, see if you can use .each_with_index in addition to .collect to solve this one in an elegant way. What happens if you write:
+
+def add_s(arr)
+  arr.each_with_index.collect { |element, index|
+    if index != 1
+      element << 's'
+    else
+      element
+    end
+  }
 end
