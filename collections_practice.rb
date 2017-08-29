@@ -24,9 +24,7 @@ def kesha_maker(arr)
 end
 
 def find_a(arr)
-  a_words = []
-  arr.each { |el| a_words << el if el.start_with?("a") }
-  a_words
+  arr.select { |el| el.start_with?("a") }  
 end
 
 def sum_array(arr)
