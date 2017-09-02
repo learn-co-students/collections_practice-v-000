@@ -13,7 +13,9 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
-  array.sort_by { |index| index[-1] } #.sort_by
+  #array.sort_by { |index| index[-1] } #.sort_by
+  array[1], array[2] = array[2], array[1]
+  array
 end
 
 def reverse_array(array)
@@ -21,7 +23,7 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  array.each { |word| word[2] = "$" }
+  array.each { |word| word[2] = "$" } #without index stated, we're iterating the word (the element from the array that's being passed) and checking it's character position. From the 2 index or the 3rd letter of the word, we can replace it with a "$".
 end
 
 def find_a(array)
@@ -40,5 +42,5 @@ def add_s(array)
     else
       word + "s"
     end
-  end  
+  end
 end
