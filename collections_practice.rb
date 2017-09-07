@@ -12,8 +12,7 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
- array[1], array[2] = array [2], array [1]
- return array[0], array[1], array[2]
+ array[0], array[1], array[2] = array[0], array [2], array [1]
 end
 
 def reverse_array(array)
@@ -25,7 +24,7 @@ def kesha_maker(array)
   array.each{|word| newarray<<word.split("")}
   lastarray = []
   newarray.each {|wl| lastarray<<wl[2] = "$"}
-finalarray = []
+  finalarray = []
   newarray.each {|e| finalarray<<e.join("")}
   finalarray
 end
