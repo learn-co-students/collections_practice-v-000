@@ -38,5 +38,27 @@ def swap_elements(array)
 end
 
 def reverse_array(array)
+  swap_elements_from_to(array,0,2)
+end
 
+def kesha_maker(array)
+  collection = []
+  array.each do |i|
+    y = i.split("")
+    y[2]='$'
+    collection << y.join
+  end
+  collection
+end
+
+def find_a(array)
+  array.select {|i| i.start_with?('a')}
+end
+
+def sum_array(ints)
+  ints.inject {|sum,n| sum + n}
+end
+
+def add_s(array)
+  array.each_with_index.collect{|element, index| index==1?element=array[index]:element=array[index]+"s" }
 end
