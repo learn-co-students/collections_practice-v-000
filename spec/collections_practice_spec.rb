@@ -30,6 +30,13 @@ describe 'collections practice' do
     end
   end
 
+  # Question 4 - Optional Test Coverage
+  describe '#swap_elements_from_to' do
+    it 'swap positions of array element at index and array element at destination_index' do
+      expect(swap_elements_from_to([1, 2, 3], 0, 2)).to eq([3, 2, 1])
+    end
+  end
+
   # Question 5
   describe '#reverse_array' do
     it 'reverse the order of an array of integers' do
