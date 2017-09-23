@@ -37,8 +37,34 @@ end
 def kesha_maker(array)
   kesha = []
   array.each do |name|
-    name[2] = $
+    name[2] = "$"
     kesha << name
   end
   kesha
+end
+
+def find_a(array)
+  a = []
+  array.select do |word|
+    if word.start_with?("a")
+      a << word
+    end
+  end
+  a
+end
+
+def sum_array(array)
+  array.inject do |sum, num|
+    sum + num
+  end
+end
+
+def add_s(array)
+  array.each_with_index.collect do |word, index|
+    if index == 1
+      word
+    else
+      word + "s"
+    end
+  end
 end
