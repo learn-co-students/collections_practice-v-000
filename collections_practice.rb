@@ -59,12 +59,10 @@ def add_s(array)
   #  e << "s"
   #end
   array.each_with_index.collect do |e, idx|
-    #if idx != 1
-    #  e << "s"
-    #else
-    #  e
-    #end
-    next e if idx = 1
-    e << "s"
+    if idx != 1
+      e << "s"
+    else
+      e
+    end
   end
 end
