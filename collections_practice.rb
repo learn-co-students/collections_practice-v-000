@@ -43,3 +43,11 @@ end
 def find_a(a)
   a.select { |str| str.start_with?('a') }
 end
+
+def sum_array(array)
+  array.inject(0){|sum,x| sum + x }
+end
+
+def add_s(array)
+
+end  
