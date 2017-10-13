@@ -35,3 +35,11 @@ end
 def reverse_array(array)
   array.reverse!
 end
+
+def kesha_maker(array)
+
+end
+
+def find_a(a)
+  a.select { |str| str.start_with?('a') }
+end
