@@ -37,7 +37,10 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-
+  array.each do |element|
+  a = element[2] = "$"
+  a
+  end
 end
 
 def find_a(a)
@@ -49,5 +52,18 @@ def sum_array(array)
 end
 
 def add_s(array)
+  array.map do |e|
+    if e == "feet"
+      "#{e}"
+    else
+      "#{e}s"
+    end
 
-end  
+  end
+end
+
+
+
+
+
+#arr = objects[0].inject([]) do |array, obj|
