@@ -19,20 +19,13 @@ def swap_elements(array)
 end
 
 def reverse_array(array)
-  arr_len = array.length-1
-  collection = []
-  array.each_with_index{|element,i| collection[arr_len-i]=element}
-  collection
+  array.reverse
 end
 
 def kesha_maker(array)
-  collection = []
   array.each do |entry|
-    word_arr = entry.split("")
-    word_arr[2]="$"
-    collection << word_arr.join
+    entry[2]= "$"
   end
-  collection
 end
 
 def find_a(array)
@@ -40,7 +33,7 @@ def find_a(array)
 end
 
 def sum_array(array)
-  array.inject{|sum, i| sum + i}
+  array.inject(:+)
 end
 
 def add_s(array)
