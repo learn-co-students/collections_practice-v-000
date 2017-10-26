@@ -1,7 +1,7 @@
-require 'pry'
 def sort_array_asc(array)
   array.sort
 end
+
 def sort_array_desc(array)
   array.sort { |a, b| b <=> a}
 end
@@ -18,7 +18,6 @@ end
 def reverse_array(array)
   copy = array.reverse
   copy
-
 end
 
 def kesha_maker(array)
