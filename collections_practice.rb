@@ -36,13 +36,11 @@ def sum_array(array)
 end
 
 def add_s(array)
-  new_array = []
-  array.each do |part|
-    if part == "feet"
-      new_array << "#{part}"
+  array.collect do |part|
+    if array[1] == part
+      part
     else
-      new_array << "#{part}s"
+      part + "s"
     end
   end
-  new_array
 end
