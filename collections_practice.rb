@@ -49,13 +49,18 @@ def kesha_maker(array)
 end
 
 def find_a(array)
-  array.collect do |element|
-    element if element.start_with?("a")
+  array.find_all do |element|
+    element.start_with?("a")
   end
 end
 
-def sum_array
+def sum_array(array)
+  array.inject{|sum, x| sum+x}
 end
 
-def add_s
+def add_s(array)
+  array.each_with_index {|element,index|
+    element<<"s" if index!=1
+  }
+  array
 end
