@@ -36,7 +36,7 @@ def sum_array(int)
   int.reduce(:+)
 end
 
-def sum_array(int) # without using .reduce
+def sum_array(int) # without using .reduce or .each
   sum = 0
   counter = 0
   while counter < int.length
