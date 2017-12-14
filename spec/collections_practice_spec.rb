@@ -33,7 +33,7 @@ describe 'collections practice' do
   # Question 4 Advanced test spec
   describe '#swap_elements_from_to' do
     it 'swaps the element from index to destination_index' do
-      expect(swap_elements_from_to([1, 2, 3, 4])).to eq([4, 2, 3, 1])
+      expect(swap_elements_from_to([1, 2, 3, 4], 0, 3)).to eq([4, 2, 3, 1])
     end
   end
 
