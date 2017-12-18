@@ -20,13 +20,11 @@ def sort_array_char_count(arr)
 end
 
 
-#Question 4 --- NOT DONE
-#reference index positions 1 and 2 and swap them---- somehow
+#Question 4 ---DONE
 def swap_elements(arr)
- arr.sort do |items|
-   items[1] <=> items[2]
- end
+ arr[0], arr[1], arr[2] = arr[0], arr[2], arr[1]
 end
+
 
 #Question 5 --- DONE
 def reverse_array(arr)
@@ -37,13 +35,15 @@ end
 #Question 6 --- NOT DONE
 #go back to the my_each lab and review for this one
 def kesha_maker(arr)
-  new_arr = []
-    arr.each do |word|
-      new_arr >> word
-    end
-    new_arr
+  i = 0
+while i < arr.length
+  yield(arr[i])
+  arr[2] = "$"
+  i += 1
 end
 
+arr
+end
 
 #Question 7 --- NOT DONE
 def find_a(arr)
@@ -62,6 +62,7 @@ arr.map do |num|
   end
   i
 end
+
 
 #Question 9 --- NOT DONE
 def add_s
