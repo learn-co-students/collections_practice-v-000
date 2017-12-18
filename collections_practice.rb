@@ -47,15 +47,21 @@ end
 
 #Question 7 --- NOT DONE
 def find_a(arr)
-
+new_array =[]
+arr.each do |word|
+   word >> new_array[] if word[0] == "a"
+ end
 end
 
 
-#Question 8 --- NOT DONE
-def sum_array
-
+#Question 8 --- DONE
+def sum_array(arr)
+i = 0
+arr.map do |num|
+  i = i + num
+  end
+  i
 end
-
 
 #Question 9 --- NOT DONE
 def add_s
