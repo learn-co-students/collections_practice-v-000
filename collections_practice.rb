@@ -32,25 +32,21 @@ def reverse_array(arr)
 end
 
 
-#Question 6 --- NOT DONE
+#Question 6 ---  DONE
 #go back to the my_each lab and review for this one
 def kesha_maker(arr)
-  i = 0
-while i < arr.length
-  yield(arr[i])
-  arr[2] = "$"
-  i += 1
+ arr.each { |str| str[2] = "$" }
 end
 
-arr
-end
 
-#Question 7 --- NOT DONE
+
+#Question 7 ---DONE
 def find_a(arr)
 new_array =[]
-arr.each do |word|
-   word >> new_array[] if word[0] == "a"
+arr.collect do |word|
+    new_array << word if word.start_with?("a")
  end
+ new_array
 end
 
 
@@ -65,6 +61,12 @@ end
 
 
 #Question 9 --- NOT DONE
-def add_s
-
+def add_s(arr)
+  arr.collect do |word|
+    if arr[1] == word
+      word
+    else
+      word + 's'
+    end
+  end
 end
