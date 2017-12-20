@@ -30,7 +30,7 @@ def reverse_array(array)
   array.reverse!
 end
 
-
+=begin original kesha_maker
 def kesha_maker(array)
   new_array = []
   new_word_array = []
@@ -43,6 +43,13 @@ def kesha_maker(array)
   end
   new_array
 end
+=end
+
+def kesha_maker(array)
+  array.each do |word|
+    word[2] = "$"
+  end
+end
 
 
 def swap_elements(array)
@@ -51,7 +58,13 @@ def swap_elements(array)
   new_array
 end
 
+def find_a(array)
+  array.find_all do |word|
+    word[0] == "a"
+  end
+end
 
+=begin original find_a
 def find_a(array)
   a_words = []
   array.select do |word|
@@ -60,7 +73,7 @@ def find_a(array)
     end
   end
 end
-
+=end
 def sum_array(array)
   total = 0
   array.each do |num|
