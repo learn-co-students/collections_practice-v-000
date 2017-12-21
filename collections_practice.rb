@@ -1,7 +1,10 @@
-def sort_array_asc(integers)
-  integers.sort
+def sort_array_asc(array)
+  array.sort
 end
 
+#original answer is explicit and could be greatly simplified with
+#the combined comparison operator
+=begin
 def sort_array_desc(array)
   array.sort do |a, b|
     if a == b
@@ -13,7 +16,14 @@ def sort_array_desc(array)
     end
   end
 end
-
+=end
+def sort_array_desc(array)
+  array.sort do | left, right|
+    right <=> left
+  end
+end
+# same for the array_char_count. use spaceship operator!!
+=begin
 def sort_array_char_count(array)
   array.sort do |a, b|
     if a.length == b.length
@@ -25,6 +35,14 @@ def sort_array_char_count(array)
     end
   end
 end
+=end
+
+def sort_array_char_count(array)
+  array.sort do |left, right|
+    left.length <=> right.length
+  end
+end
+
 
 def reverse_array(array)
   array.reverse!
@@ -51,12 +69,24 @@ def kesha_maker(array)
   end
 end
 
-
+#original swap.
+=begin
 def swap_elements(array)
   new_array = array.insert(1, array[2])
   new_array.pop
   new_array
 end
+=end
+
+def swap_elements(array)
+  array[1], array[2] = array[2], array[1]
+  array
+end
+ #performs switch simutanesoulsy so we don't loose a value.
+ #for example if we did array [1] = array [2]
+#and then array [2] = array [1], we'd have array [1] and array [2] equal to
+#array[2](because we did that switch first without saving the second switch
+#value(array [2]))
 
 def find_a(array)
   array.find_all do |word|
