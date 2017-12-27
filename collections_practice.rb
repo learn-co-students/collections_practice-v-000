@@ -42,19 +42,29 @@ end
 
 
   def find_a(array)
-
+ # the |i| in pink in a automatic index or string.
     array.select{|i| i[0] == "a"}
     #target elements that start with "a"
 
      end
 
 
-  #  def sum_array(array)
-  #     array.inject
-   #
-  #   end
+   def sum_array(array)
+     # sum start at 0 then the "n" keep adding to the sum.
+     array.inject{|sum, n| sum + n}
+   end
 
 
-
-
-# end
+   def add_s(array)
+     array.collect.with_index do |element, index|
+       #index start out at 0 and 1 would be the 2nd element in that array
+       #index is a position in an array  start out at 0 and increase by 1
+       # element is the representataion of what is in the array..i.e "hands", "tables". etc.       if index == 1
+         element
+        else
+        element + "s"
+      end
+     end
+# add "s" to the end of each array exact the second array.
+# .push add the the end of an array
+   end
