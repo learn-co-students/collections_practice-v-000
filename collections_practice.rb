@@ -11,8 +11,26 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
+  array [0], array[1], array[2] = array[0], array[2], array[1]
 end
 
 def reverse_array(array)
   array.reverse
-end 
+end
+
+def kesha_maker(array)
+  array.each_with_index{|str,index| str[2] = "$"}
+end
+
+def find_a(array)
+  array.select {|str| str < "b"}
+end
+
+
+def sum_array(array)
+  array.inject(0){ |sum, i| sum + i }
+end
+
+def add_s(array)
+  array.each_with_index{|element,index| element << ("s") if index != 1}
+end
