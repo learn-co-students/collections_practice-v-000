@@ -31,7 +31,8 @@ describe 'collections practice' do
   end
 
   # Question 5
-  describe '#reverse_array' do
+ describe '#reverse_array' do
+
     it 'reverse the order of an array of integers' do
       expect(reverse_array([12, 4, 35])).to eq([35, 4, 12])
     end
@@ -47,7 +48,7 @@ describe 'collections practice' do
 
   # Question 7
   describe '#find_a' do
-    it 'find all words that begin with "a" in the following array' do
+    xit 'find all words that begin with "a" in the following array' do
       expect(find_a(["apple", "orange", "pear", "avis", "arlo", "ascot" ])).to eq(["apple", "avis", "arlo", "ascot"])
     end
   end
@@ -55,14 +56,14 @@ describe 'collections practice' do
   # Question 8
   describe '#sum_array' do
     #for a bonus, look up the `.inject` method to get this test passing
-    it 'sum all the numbers in the following array' do
+    xit 'sum all the numbers in the following array' do
       expect(sum_array([11,4,7,8,9,100,134])).to eq(273)
     end
   end
 
   # Question 9
   describe '#add_s' do
-    it 'Add an "s" to each word in the array except for the 2nd element in the array' do
+    xit 'Add an "s" to each word in the array except for the 2nd element in the array' do
       expect(add_s(["hand","feet", "knee", "table"])).to eq(["hands","feet", "knees", "tables"])
     end
   end
