@@ -41,17 +41,13 @@ def find_a(array)
 end
 
 def sum_array(array)
-  sum = 0
-  array.each do |element|
-    sum += element
+  array.inject do |sum, n|
+    sum + n
   end
-  return sum
 end
 
 def add_s(array)
-  array.each do |element|
-    element << "s"
-  end
-  array[1].tr!("s","")
-  return array
+  array.each_with_index.collect do |element, index|
+    index != 1 ? element << "s" : element
+    end
 end
