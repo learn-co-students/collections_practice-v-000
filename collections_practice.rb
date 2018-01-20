@@ -16,10 +16,9 @@ end
 
 
 def swap_elements(array)
-  left = array[1]
   right  = array[2]
+  array[2] = array[1]
   array[1] = right
-  array[2] = left
   array
 end
 
