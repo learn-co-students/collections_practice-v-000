@@ -23,7 +23,14 @@ def swap_elements(array)
   array
 end
 
-# need to try advanced question for above
+# need to try advanced question
+def swap_elements_from_to(array, idx, dest_idx)
+  left = array[idx]
+  right  = array[dest_idx]
+  array[idx] = right
+  array[dest_idx] = left
+  array
+end
 
 
 def reverse_array(array)
@@ -47,12 +54,37 @@ end
 
 def sum_array(array)
   array.reduce(:+)
+
+  # advance Practice
+  # array.inject {|acc, ele| acc + ele }
+
 end
 
 def add_s(array)
-  # ans_arr = []
+
+
+
   array.map.with_index do |str, idx|
       idx == 1 ? str = str : str << "s"
     end
+
+  # ans_arr = []
+  #   array.each_with_index do |e,i|
+  #       if i == 1
+  #         ans_arr << e
+  #       else
+  #         ans_arr << e + "s"
+  #     end
+  #   end
+  # ans_arr
+
+  # array.each_with_index.collect do |e,i|
+  #   if i == 1
+  #     e
+  #   else
+  #     e + "s"
+  #   end
+  # end
+
 
 end
