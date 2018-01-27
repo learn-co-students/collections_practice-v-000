@@ -1,25 +1,25 @@
 def sort_array_asc(array)
-  array.sort do |a, b|
-    a <=> b
-  end
+  array.sort
 end
 
 def sort_array_desc(array)
-  array.sort do |b, a|
-    a <=> b
+  array.sort do |a, b|
+    b <=> a
   end
 end
 
 def sort_array_char_count(array)
-  array.sort_by do |word|
-    word.length
+  array.sort do |a, b|
+    a.length <=> b.length
   end
 end
 
 def swap_elements(array)
-  ele1 = array[1]
-  ele2 = array[2]
-  array = [array[0], array[2], array[1]]
+  element0 = array[0]
+  element1 = array[1]
+  element2 = array[2]
+
+  array = [element0, element2, element1]
 end
 
 def reverse_array(array)
@@ -27,31 +27,34 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  array.each do |string|
-    string[2] = "$"
+  array.each do |name|
+    name[2] = "$"
   end
 end
 
 def find_a(array)
   array.select do |word|
-    word[0] == "a"
+    if word.start_with?("a")
+      word
+    end
   end
 end
 
 def sum_array(array)
-  array.inject do |a, b|
-    a += b
+  sum = 0
+  array.each do |number|
+    sum += number
   end
+  sum
 end
 
-
-
 def add_s(array)
-  array.each_with_index.collect do |word, index|
-    if index == 1
+  array.collect do |word|
+    if array[1] == word
       word
     else
       word << "s"
     end
   end
+  
 end
