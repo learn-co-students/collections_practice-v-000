@@ -20,5 +20,27 @@ end
 
 def kesha_maker(strings)
   new_strings = []
-  strings.each {|string| }
+  strings.each do |string|
+    string[2] = "$"
+    new_strings << string
+  end
+end
+
+def find_a(strings)
+  strings.select {|string| string[0]=="a"}
+end
+
+def sum_array(integers)
+  integers.inject {|sum,n| sum + n}
+end
+
+def add_s(strings)
+  #strings.each {|string| string << "s"}
+  strings.each_with_index.collect do |string, index|
+    if index == 1
+      string
+    else
+      string << "s"
+    end
+  end
 end
