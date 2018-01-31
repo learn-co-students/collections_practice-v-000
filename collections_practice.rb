@@ -20,15 +20,14 @@ def reverse_array(integers)
 end
 
 def kesha_maker(names)
-  names.collect do |element|
+  names.each do |element|
     element[2] = "$"
-    element
   end
 end
 
 def find_a(array)
   array.select do |word|
-    word.chr == "a"
+    word[0] == "a"
   end
 end
 
@@ -39,8 +38,8 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.collect.with_index do |word, index|
-    if index == 1
+  array.collect do |word|
+    if array[1] == word
       word
     else
       word + "s"
