@@ -72,3 +72,10 @@ def add_s(array_of_words)
    end
    array_of_words_with_s
 end
+#   word_array.find do |word|
+#     if word[0] == "a"
+#       binding.pry
+#     words_starting_with_a << word
+#     end
+#   end
+# end
