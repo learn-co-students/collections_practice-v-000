@@ -43,4 +43,32 @@ def kesha_maker(array)
   end
 end
 
-def find_a
+def find_a(word_array)
+  words_starting_with_a = []
+  word_array.each do |word|
+    if word[0] == "a"
+    words_starting_with_a << word
+    end
+  end
+  words_starting_with_a
+end
+
+def sum_array(array_of_strings)
+  running_total = 0
+  array_of_strings.each do |string|
+    running_total = string.to_i + running_total
+  end
+  running_total
+end
+
+def add_s(array_of_words)
+  array_of_words_with_s = []
+   array_of_words.each do |word|
+     if word == array_of_words[1]
+       array_of_words_with_s << word
+     else
+       array_of_words_with_s << "#{word}" + "s"
+     end
+   end
+   array_of_words_with_s
+end
