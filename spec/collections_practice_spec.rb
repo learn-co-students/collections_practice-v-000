@@ -29,6 +29,13 @@ describe 'collections practice' do
       expect(swap_elements(["blake", "ashley", "scott"])).to eq(["blake", "scott", "ashley"])
     end
   end
+  
+  # Question 4+
+  describe '#swap_elements_from_to' do
+    it 'swap the elements of an array based on an index and a destination index' do
+      expect(swap_elements_from_to(["blake", "ashley", "scott", "monica"], 1, 3)).to eq(["blake", "monica", "scott", "ashley"])
+    end
+  end
 
   # Question 5
   describe '#reverse_array' do
