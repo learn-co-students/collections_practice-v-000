@@ -52,11 +52,5 @@ end
 
 # using .each_with_index.collect
 # def add_s(array)
-#   array.each_with_index.collect do |item, index|
-#     if index != 1
-#       item << "s"
-#     elsif index == 1
-#       item
-#     end
-#   end
+#   array.each_with_index.collect { |item, index| index != 1 ? item << "s" : item }
 # end
