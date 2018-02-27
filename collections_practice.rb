@@ -1,6 +1,4 @@
 
-test_array = ["arm","feet","leg"]
-
 def sort_array_asc(array)
   return array.sort
 end
