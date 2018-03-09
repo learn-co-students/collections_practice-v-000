@@ -50,9 +50,7 @@ def add_s(array)
         new_array.push("s")
       new_array.join
     else
-      if index == 1
-        word
-      end
+      word
     end
   end
 end
