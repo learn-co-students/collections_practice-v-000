@@ -12,9 +12,7 @@ def sort_array_char_count(integers)
 end
 
 def swap_elements(integers)
-  third = integers[2]
-  integers[2] = integers[1]
-  integers[1] = third
+  integers[1], integers[2] = integers[2], integers[1]
   integers
 end
 
@@ -23,10 +21,8 @@ def reverse_array(integers)
 end
 
 def kesha_maker(strings)
-  strings.map do |string|
-    letters = string.split(//)
-    letters[2] = "$"
-    letters.join
+  strings.each do |string|
+    string[2] = "$"
   end
 end
 
@@ -40,4 +36,9 @@ end
 
 def add_s(words)
   words.each { |word| word << "s" if words.index(word) != 1 }
+end
+
+def swap_elements_from_to(array, index, destination_index)
+  array[index], array[destination_index] = array[destination_index], array[index]
+  array
 end

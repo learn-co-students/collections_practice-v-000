@@ -30,6 +30,12 @@ describe 'collections practice' do
     end
   end
 
+  describe 'swap_elements_from_to' do
+    it 'swaps two elements of an array with the given indices' do
+      expect(swap_elements_from_to(%w(a b c), 0, 2)).to eq(%w(c b a))
+    end
+  end
+
   # Question 5
   describe '#reverse_array' do
     it 'reverse the order of an array of integers' do
