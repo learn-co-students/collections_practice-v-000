@@ -26,11 +26,18 @@ end
 
   def find_a(array)
   end
+  
 
   def sum_array(array)
     array.inject{|sum, n| sum + n }
   end
 
   def add_s(array)
-    [1,2].each_with_index.collect{|element, index| }
+    array.each do |words|
+    if words == array[1]
+      words
+    else
+        words << "s"
+      end
+    end
   end
