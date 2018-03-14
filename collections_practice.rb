@@ -34,10 +34,7 @@ end
 
 def add_s(array)
   array[0,4].each.collect do |object|
-    if object != array[1]
-      object << "s"
-    else
-      object = object
+    object != array[1]? object << "s" : object = object
     end
   end
 end
