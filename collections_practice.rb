@@ -15,19 +15,23 @@ def sort_array_char_count (string_array)
 end
 
 def swap_elements (array)
-  tmp = array[1]
-  array[1]=array[2]
-  array[2]=tmp
+  array[1], array[2] = array[2], array[1]
   array
+#  tmp = array[1]
+#  array[1]=array[2]
+#  array[2]=tmp
+#  array
 end
 
 def swap_elements_from_to (array, index, destination)
-  index -= 1
-  destination -= 1
-  tmp = array[index]
-  array[index]=array[destination]
-  array[destination]=tmp
+  array[index-1], array[destination-1] = array[destination-1], array[index-1]
   array
+#  index -= 1
+#  destination -= 1
+#  tmp = array[index]
+#  array[index]=array[destination]
+#  array[destination]=tmp
+#  array
 end
 
 def reverse_array (array)
@@ -35,8 +39,8 @@ def reverse_array (array)
 end
 
 def kesha_maker (string_array)
-  string_array.collect do |word|
-    word.sub(word[2],"$")
+  string_array.each do |word|
+    word[2] = "$"
   end
 end
 
