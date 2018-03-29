@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe 'collections practice' do
 
