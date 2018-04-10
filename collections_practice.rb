@@ -37,13 +37,7 @@ end
 
 def find_a(array)
   new_array = Array.new
-  array.each do |i|
-    if i[0] == "a"
-      new_array << i
-    else
-    end
-  end
-  new_array
+  array.select! {|i| i[0] == "a"}
 end
 
 def sum_array(array)
@@ -59,7 +53,7 @@ def add_s(array)
     if index != 1
       word << "s"
     else
-      word 
+      word
     end
   end
 end
