@@ -34,6 +34,6 @@ end
 
 def add_s(array)
   array.each_with_index.collect do |x, index|
-    index == 1 ? x =x:x << "s"
+    index == 1 ? x = x : x << "s"
   end
 end
