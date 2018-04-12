@@ -25,17 +25,9 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  new_names = []
   array.each do |ele|
-    if ele.length % 2 == 0
-      ele.slice!((ele.length/2) - 1)
-      new_names << ele.insert((ele.length/2).floor, "$")
-    else
-      ele.slice!(ele.length/2)
-      new_names << ele.insert((ele.length/2).floor,"$")
-    end
+    ele[2] = "$"
   end
-  new_names
 end
 
 def find_a(array)
