@@ -39,5 +39,5 @@ def sum_array(array)
 end 
 
 def add_s(array)
-	array.each { |element| array[1] == element ? element : element << 's' }  #figure out how to exclude array[1], which would be with 
+	array.each { |element| array[1] == element ? element : element << 's' }  
 end
