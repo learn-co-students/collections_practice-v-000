@@ -78,11 +78,7 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.collect do |string|
-    if string != "feet"
-      string += "s"
-    else
-      string
-    end
+  array.collect.with_index do |string, i|
+    i != 1 ? string += "s" : string
   end
 end
