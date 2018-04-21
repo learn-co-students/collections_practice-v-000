@@ -1,3 +1,4 @@
+require 'pry'
 def sort_array_asc(array)
   array.sort do |a, b|
     a <=>b
@@ -27,11 +28,14 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  array.each do |name|
-    name.gsub(/[]/, 'e' => 3, 'o' => '*') 
-  #   name.each_with_index do |place, replacement|
-  #     name[2]='$'
-  #   end
-  # #name.each_with_index {|o, i| array[3]=replacments['$']}
+  array.each do |name| name[2]="$"
   end
 end
+
+ def find_a(array)
+  array.select{|word| word.start_with?("a")}
+end
+
+def sum_array(array)
+  
+
