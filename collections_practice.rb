@@ -20,6 +20,11 @@ def swap_elements(array)
   array
 end
 
+def swap_elements_from_to(array, i, j)
+  array[i], array[j] = array[j], array[i]
+  array
+end
+
 def reverse_array(integers)
   new_integers = integers.reverse
   new_integers
@@ -43,11 +48,11 @@ def sum_array(integers)
 end
 
 def add_s(array)
-  array.each_with_index.collect do |add, index|
+  array.each_with_index.collect do |word, index|
     if index == 1
-      add
+      word
     else
-      add + "s"
+      word + "s"
     end
   end
 end
