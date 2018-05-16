@@ -1,5 +1,3 @@
-
-
 def sort_array_asc(array)
   array.sort
 end
@@ -20,7 +18,13 @@ def swap_elements(array)
   array
 end
 
-# advanced ~ DON'T FORGET ABOUT MEEEEE !!!!!!!!!!!!!!!!!!!!?!?!?!?!
+def swap_elements_from_to(array, index, destination_index)
+  from = array[index]
+  to = array[destination_index]
+  array[index] = to
+  array[destination_index] = from
+  array
+end
 
 def reverse_array(array)
   array.reverse
