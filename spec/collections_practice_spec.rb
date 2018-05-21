@@ -30,6 +30,13 @@ describe 'collections practice' do
     end
   end
 
+  # Question 4.5
+  describe 'swap_elements_from_to' do
+    it 'swap a specified index with a specified destination_index' do
+      expect(swap_elements_from_to(["blake", "ashley", "scott"], 1, 2)).to eq(["blake", "scott", "ashley"])
+    end
+  end
+
   # Question 5
   describe '#reverse_array' do
     it 'reverse the order of an array of integers' do
@@ -42,6 +49,14 @@ describe 'collections practice' do
     # DO NOT USE .collect or .map. use .each to build a new array, like in the "my_each" lab!
     it 'taking an array as an input, change the 3rd character of each element to a dollar sign.' do
       expect(kesha_maker(["blake", "ashley", "scott"])).to eq(["bl$ke", "as$ley", "sc$tt"])
+    end
+  end
+
+  # Question 6.5
+  describe '#kesha_maker_improved' do
+    # DO NOT USE .collect or .map. use .each to build a new array, like in the "my_each" lab!
+    it 'taking an array as an input, change any "S" in each element to a dollar sign.' do
+      expect(kesha_maker_improved(["blake", "ashley", "scott"])).to eq(["blake", "a$hley", "$cott"])
     end
   end
 
