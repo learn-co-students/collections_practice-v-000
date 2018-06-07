@@ -1,39 +1,54 @@
+#Question 1
 def sort_array_asc(array)
   array.sort
 end
 
+#Question 2
 def sort_array_desc(array)
   array.sort.reverse
 end
 
+#Question 3
 def sort_array_char_count(array)
   array.sort_by {|character| character.length}
 end
 
-def swap_elements(array, index, desintation_index)
+#Question 4
+def swap_elements(array)
   array[1], array[2] = array[2], array[1]
+  array
 end
 
+#Question 5
 def reverse_array(array)
   return array.reverse
 end
 
+#Question 6
 def kesha_maker(array)
-  array.each do | even_character |
-    even_character[2] = $
+  array.each do | item |
+    item[2] = "$"
+  end
+end
+
+#Question 7
+def find_a(array)
+  array.select do |item|
+    item.start_with?("a")
   end
 end
 
 
+#Question 8:
 def sum_array(array)
   array.inject do | sum, number |
     sum + number
   end
 end
   
-  
-#def add_s(array)
-#  array.each_with_index.collect do {|element, index|}
-#  end
-#end
+#Question 9   AHHHHH!!!!
+def add_s(array)
+  array.each_with_index.collect {| element, index |}
+    ###????
+end
   
