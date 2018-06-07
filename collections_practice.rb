@@ -18,16 +18,17 @@ def reverse_array(array)
   return array.reverse
 end
 
-#def kesha_maker(array)
-#  if element[index] % 3 == 0
-#end
+def kesha_maker(array)
+  array.each do | even_character |
+    even_character[2] = $
+  end
+end
+
 
 def sum_array(array)
-  sum = 0
-  array.each do |number|
-    sum += number
+  array.inject do | sum, number |
+    sum + number
   end
-  return sum
 end
   
   
