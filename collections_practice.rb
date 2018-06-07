@@ -17,3 +17,22 @@ end
 def reverse_array(array)
   return array.reverse
 end
+
+#def kesha_maker(array)
+#  if element[index] % 3 == 0
+#end
+
+def sum_array(array)
+  sum = 0
+  array.each do |number|
+    sum += number
+  end
+  return sum
+end
+  
+  
+#def add_s(array)
+#  array.each_with_index.collect do {|element, index|}
+#  end
+#end
+  
