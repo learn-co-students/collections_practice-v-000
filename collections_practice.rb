@@ -44,7 +44,7 @@ def sum_array(array)
     array.inject { |sum, n| sum + n}
 end
 
-def add_s(array)
+=begin def add_s(array)
   n = 0
   until n == array.length
     if n == 1
@@ -56,4 +56,14 @@ def add_s(array)
     end
   end
   return array
+end
+=end
+def add_s(array)
+  array.collect do |word|
+    if array[1] == word
+      word
+    else
+      word + "s"
+    end
+  end
 end
