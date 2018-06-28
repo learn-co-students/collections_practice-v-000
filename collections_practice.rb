@@ -1,6 +1,6 @@
 def sort_array_asc(integer)
 
-integer.sort { |a, b|  a <=> b }
+integer.sort
 end
 def sort_array_desc(integer)
   integer.sort { |a, b| b <=> a }
@@ -29,7 +29,7 @@ end
 
 def find_a(array)
   array.select do |a|
-      a[0] == "a"
+      a.start_with?("a")
 
     end
 
@@ -37,19 +37,18 @@ end
 
 def sum_array(array)
 
-  array.inject(0){|start,arr| start + arr }
+  array.inject{|a,b| a + b }
 
 end
 
 def add_s(array)
 
-array.each_with_index.collect{|element, index|
-  if index == 1
+array.collect{|element|
+  if element == "feet"
     element
   else
-    element += "s"
+    element + "s"
   end
-  }
-
+ }
 
 end
