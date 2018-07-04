@@ -49,12 +49,12 @@ def sum_array(sum_array)
   sum_array.inject(0) {|result, element| result + element }
 end
 
-def add_s(array)
-  new_array = []
-  array.each_with_index.collect do |word, index|
-    word << "s"
-    new_array << word
+def add_s(add_array)
+  add_array.collect do |word|
+    if add_array[1] == word
+      word
+    else
+      word + "s"
+    end
   end
-  new_array[1] = "feet"
-  return new_array
 end
