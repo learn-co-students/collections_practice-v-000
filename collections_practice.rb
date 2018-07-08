@@ -24,10 +24,26 @@ end
 
 def kesha_maker(names)
   names.map! do |x|
-    x[2] << "$"
+    x.gsub(x[2], "$")
   end
 end
 
 def find_a(words)
-  words.start_with?("a")
+  words.select do |word|
+    word.start_with?("a")
+  end
+end
+
+def sum_array(integers)
+  integers.reduce(:+)
+end
+
+def add_s(words)
+  words.map! do |word|
+    if word != words[1]
+      word << "s"
+    else
+      word
+    end
+  end
 end
