@@ -31,10 +31,10 @@ def sum_array(elem)
 end
 
 def add_s(elem)
-  #elem.each{|e| e[-1].push("s") if e!=e[1]} #tried but not working
-  elem.each_with_index do |elem, index|
-    if index !=1
-      elem << "s"
-    end
-  end
+  elem.each_with_index{|el,i| el << "s" if i != 1} #tried but not working
+  #elem.each_with_index do |elem, index|
+    #if index !=1
+      #elem << "s"
+    #end
+  #end
 end
