@@ -36,13 +36,10 @@ end
 
 def add_s(array)
   array.each_with_index.collect { |plural, index| (index == 1) ? plural : plural + "s" }
-     # binding.pry
-
       # if index == 1
       #   plural
       # else
       #   plural + "s"
       # end
     # end
-
 end
