@@ -1,3 +1,5 @@
+require 'pry'
+
 def sort_array_asc(array)
   array.sort
 end
@@ -33,5 +35,14 @@ def sum_array(array)
 end
 
 def add_s(array)
-  add_s.each_with_index.collect {|plural, index| plural + "s" index}
+  array.each_with_index.collect { |plural, index| (index == 1) ? plural : plural + "s" }
+     # binding.pry
+
+      # if index == 1
+      #   plural
+      # else
+      #   plural + "s"
+      # end
+    # end
+
 end
