@@ -27,12 +27,33 @@ end
 names = ["blake", "ashley", "scott"]
 
 def kesha_maker(names)
-  i = 0
-  updated_names = []
-  while i < names.length
-    names.each_with_index do |name|
-      name.chomp([2])
+  names.each do |dollar_sign|
+    dollar_sign[2] = "$"
+end
+end
+
+def find_a(array)
+  array.select do |word|
+    if "#{word}".start_with?("a")
+      word
     end
-    i += 1
   end
+end
+
+def sum_array(array)
+  array.inject {|sum, n| sum + n}
+end
+
+def add_s(array)
+  array.collect do |element|
+    if element == "hand"
+      "#{element}s"
+    elsif element == "knee"
+      "#{element}s"
+    elsif element == "table"
+      "#{element}s"
+    else
+      "#{element}"
+    end
+end
 end
