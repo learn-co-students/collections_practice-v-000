@@ -30,6 +30,21 @@ describe 'collections practice' do
     end
   end
 
+  # Question 4.5
+  describe '#swap_elements_from_to' do 
+    it 'swaps the elements of an array at the user-specified indexes' do 
+      expect(swap_elements_from_to(["a", "b", "c"], 0, 2)).to eq(["c", "b", "a"])
+      expect(swap_elements_from_to(["a", "b", "c"], 2, 1)).to eq(["a", "c", "b"])
+      expect(swap_elements_from_to(["pi", "equals", 3, ".", 1, 4, 1, 5, 9], 1, 7)).to eq(["pi", 5, 3, ".", 1, 4, 1, "equals", 9])
+    end
+    
+    it 'does not change the original array' do 
+      array = [1,2,3,4,5]
+      swap_elements_from_to(array, 0, 3)
+      expect(array).to eq([1,2,3,4,5])
+    end
+  end
+
   # Question 5
   describe '#reverse_array' do
     it 'reverse the order of an array of integers' do
