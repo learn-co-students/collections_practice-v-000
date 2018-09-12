@@ -1,26 +1,26 @@
-def sort_array_asc(num_array)
-  num_array.sort { |a, b| a <=> b }
+def sort_array_asc(array)
+  array.sort
 end
 
-def sort_array_desc(num_array)
-  num_array.sort { |a, b| b <=> a }
+def sort_array_desc(array)
+  array.sort { |a, b| b <=> a }
 end
 
-def sort_array_char_count(string_array)
-  string_array.sort_by { |word| word.length}
+def sort_array_char_count(array)
+  array.sort_by { |word| word.length}
 end
 
 def swap_elements(array)
   array[1], array [2] = array[2], array[1]
-  return array
+  array
 end
 
-def reverse_array(num_array)
-  num_array.reverse
+def reverse_array(array)
+  array.reverse
 end
 
-def kesha_maker(string_array)
-  string_array.each do |word|
+def kesha_maker(array)
+  array.each do |word|
     word[2] = "$"
   end
 end
