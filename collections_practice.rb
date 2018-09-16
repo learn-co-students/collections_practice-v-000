@@ -35,3 +35,13 @@ def find_a(array)
     word.start_with? "a"
   end 
 end 
+
+def sum_array(array)
+  array.inject(0){|sum,x| sum + x }
+end 
+
+def add_s(array)
+  array.each_with_index.collect{|element, index| element[] }
+end 
+
+
