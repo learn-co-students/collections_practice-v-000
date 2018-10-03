@@ -24,10 +24,13 @@ end
 def kesha_maker(array)
   kesha_array = []
   array.each do |word|
+
     kesha_array << word[2] = "$"
+
     kesha_array
   end
 end
+
 
 def find_a(array)
   array.keep_if{|word| word[0] == "a"}
@@ -38,11 +41,16 @@ def sum_array(array)
 end
 
 def add_s(array)
-ends_with_s = []
-array[0].each_with_index.collect{|element| ends_with_s << element + "s" }
-ends_with_s
+array.each_with_index.collect do |element, index| 
+  if index != 1 
+    element + "s"
+  else
+    element
+  end
+end
 end
  
+
   
   
   
