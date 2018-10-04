@@ -20,6 +20,16 @@ def swap_elements(array)
 end
 
 #Question 4b ********
-def swap_elements_from_to()
-
+def swap_elements_from_to(array, index, destination_index)
+  original = array[index]; updated = array[destination_index]
+  array[index] = updated; array[destination_index] = original
+  array
+end
 #Question 4b ********
+
+def reverse_array(array)
+  array.reverse
+end
+
+def kesha_maker(array)
+end
