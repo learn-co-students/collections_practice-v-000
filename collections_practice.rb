@@ -32,4 +32,34 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
+  array.collect! do |string|
+   newString = string.chars
+   newString[2] = "$"
+   newString.join
+  end
+  array
+end
+
+def find_a(array)
+  newArray = []
+  array.collect! do |string|
+    if string.start_with?("a")
+      newArray << string
+    end
+  end
+  newArray
+end
+
+def sum_array(array)
+  array.inject {|sum, n| sum + n }
+end
+
+def add_s(array)
+  array.each_with_index.collect do |string, index|
+    if index != 1 
+      string.gsub(/\z/, "s")
+    else
+      string
+    end
+  end
 end
