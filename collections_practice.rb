@@ -10,10 +10,13 @@ def sort_array_char_count(array)
   sorted_array = array.sort {|left,right| left.length <=> right.length}
 end
 
-def swap_elements
-  def swap_elements_to(array,index,destination_index)
-    array.insert(index)
-  end
+def swap_elements_from_to(array,index,destination_index)
+    array[index], array[destination_index] = array[destination_index], array[index]
+end
+  
+def swap_elements(array)
+  swap_elements_from_to(array,1,2)
+  array
 end
 
 def reverse_array(array)
@@ -21,10 +24,13 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  array.collect do |element|
-    binding.pry
-    element[2]= "$"
+  kesha_d = []
+  array.each do |element|
+    element_array = element.split ""
+    element_array[2] = "$"
+    kesha_d << element_array.join
   end
+  kesha_d
 end
 
 def find_a(array)
