@@ -44,7 +44,7 @@ end
 
 def add_s(array)
   array.each_with_index.collect do |word, index|
-    word != "feet" ? word[index] = "#{word}s" : "#{word}"
+    index != 1 ? "#{word}s" : "#{word}"
   end
   # array.collect do |word|
   #   word != "feet" ? "#{word}s" : "#{word}"
