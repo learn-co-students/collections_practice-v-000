@@ -25,28 +25,19 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  array.each do |name|
-    name.split
-    name[2] = "$"
-  end
+  array.each { |name| name[2] = "$" }
 end
 
 def find_a(array)
-  array.select do |word|
-    word.start_with?("a")
-    #word.match(/^[a]/)
-  end
+  array.select { |word| word.start_with?("a") }
+  #array.select { |word| word.match(/^[a]/) }
 end
 
 def sum_array(array)
-  array.inject do |sum, i|
-    sum + i
-  end
+  array.inject { |sum, i| sum + i }
   # sum = 0
   # while sum < array.length
-  #   array.each do |i|
-  #     sum += i
-  #   end
+  #   array.each { |i| sum += i }
   # end
   # sum
 end
