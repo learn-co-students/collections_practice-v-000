@@ -30,6 +30,12 @@ describe 'collections practice' do
     end
   end
 
+  describe '#swap_elements_from_to' do
+    it 'swaps the n and m elements from an array' do
+      expect(swap_elements_from_to(["honey", "apples", "walnuts"], 0, 2)).to eq(["walnuts", "apples", "honey"])
+    end
+  end
+
   # Question 5
   describe '#reverse_array' do
     it 'reverse the order of an array of integers' do
