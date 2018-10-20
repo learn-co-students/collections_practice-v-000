@@ -11,13 +11,8 @@ def sort_array_char_count(arr)
 end
 
 def swap_elements(arr)
-  arr.sort do |a,b|
-    if a == arr[1] and b == arr[2]
-      1
-    else
-      0
-    end
-  end
+  arr[1], arr[2] = arr[2], arr[1]
+  arr
 end
 
 def swap_elements_from_to(arr, n, m)
