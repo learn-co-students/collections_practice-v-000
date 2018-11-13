@@ -28,3 +28,28 @@ end
 def reverse_array(array)
   array.reverse
 end
+
+# I feel like this can be refactored using 'yield'
+def kesha_maker(string_array)
+  new_array = []
+  string_array.each { |word| new_array << word }
+  new_array.each { |char| char[2] = "$" }
+end
+
+def find_a(string_array)
+    string_array.select { |string| string[0][0] == "a" }
+end
+
+def sum_array(integer_array)
+  integer_array.inject { |sum, n| sum + n }
+end
+
+def add_s(string_array)
+  string_array.each_with_index.collect do |element, index|
+    if index != 1
+      element << "s"
+    else
+      element
+    end
+  end
+end
