@@ -19,3 +19,21 @@ end
 def reverse_array(array)
   array.reverse
 end
+
+def kesha_maker(array)
+  #new_array = []
+  array.each do |element|
+    element[2] = "$"
+    #new_array << element
+  end
+end
+
+def find_a(array)
+  array.join.scan(/^\A[a]\w*/)
+
+end
+#^\A[a]\w*
+#strings.join.scan /cat|dog/
+#str.scan(regexp)
+#str[index] = str2
+#str.insert(index, str2)
