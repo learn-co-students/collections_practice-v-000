@@ -31,7 +31,18 @@ end
 def find_a(array)
   array.select { |word| /\b\A[a]\w*\b/ =~ word }
 end
-  #array.select { |e| /\b\A[a]\w*/ =~ e }
+
+def sum_array(array)
+  array.reduce() {|sum, num| sum + num}
+end
+
+def add_s(array)
+  array.map do |element|
+  element.concat("s")
+  end
+end
+
+#array.select { |e| /\b\A[a]\w*/ =~ e }
 
 #test = ["i am a boy" , "i am a girl"]
 
