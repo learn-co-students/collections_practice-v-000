@@ -29,9 +29,14 @@ def kesha_maker(array)
 end
 
 def find_a(array)
-  array.join.scan(/^\A[a]/)
-
+  array.select { |word| /\b\A[a]\w*\b/ =~ word }
 end
+  #array.select { |e| /\b\A[a]\w*/ =~ e }
+
+#test = ["i am a boy" , "i am a girl"]
+
+#test.find { |e| /boy/ =~ e }   #=> "i am a boy"
+#test.find { |e| /frog/ =~ e }  #=> nil
 #^\A[a]\w*
 #strings.join.scan /cat|dog/
 #str.scan(regexp)
