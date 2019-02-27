@@ -29,18 +29,23 @@ def kesha_maker(array)
 end
 
 def find_a(array)
-  array.select { |word| /\b\A[a]\w*\b/ =~ word }
+  array.select { |word| /(\b[a]\w*)/ =~ word }
 end
+#(\b[a]\w*)
+#\b\A[a]\w*\b
 
 def sum_array(array)
   array.reduce() {|sum, num| sum + num}
 end
 
 def add_s(array)
-  array.map do |element|
-  element.concat("s")
+  badword = array.delete_at(1)
+  array.select { |word| /(\w)+((d|e)\b)/ =~ word }.map do |word|
+  word.concat("s") 
+
   end
 end
+#(\w)+((d|e)\b)
 
 #array.select { |e| /\b\A[a]\w*/ =~ e }
 
