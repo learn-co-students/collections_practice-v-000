@@ -1,17 +1,13 @@
 def sort_array_asc(numbers)
-  numbers.sort  
+  numbers.sort 
 end 
 
 def sort_array_desc(numbers)
-  numbers.sort do |a, b| 
-    b <=> a 
-  end 
+  numbers.sort.reverse 
 end 
 
 def sort_array_char_count(strings)
-     strings.sort do |a, b| 
-    a.length <=> b.length
-  end 
+    strings.sort {|left, right| left.length <=> right.length}
 end 
 
 def swap_elements(array)
@@ -20,47 +16,33 @@ def swap_elements(array)
 end
 
 def reverse_array(numbers)
-  numbers.reverse 
+  numbers.reverse
 end 
 
-def kesha_maker(strings)
+def kesha_maker(array)
   kesha = []
-  strings.each do |third| 
-    word_array = third.split ""
+  array.each do |word|
+    word_array = word.split ""
     word_array[2] = "$"
     kesha << word_array.join
-  end 
+  end
   kesha
 end
 
 def find_a(strings)
-  strings.select do |start| 
-    start.start_with?("a")
-  end
+  strings.select {|a| a.start_with?("a")}
 end
 
 def sum_array(array)
-  array.inject do |sum, n| sum + n 
-  end
+ array.inject{|sum, n| sum + n}
 end
 
 def add_s(array)
-  array.each_with_index.collect do |a, b| 
-    if b == 1 
-      a
-    else 
-      a << "s"
+  array.each_with_index.collect do |string, index|
+    if index == 1
+      string
+    else
+      string << "s"
     end
   end
 end
-
-
-
-
-
-
-
-
-
-
-
