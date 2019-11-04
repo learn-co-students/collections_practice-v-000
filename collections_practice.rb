@@ -8,44 +8,29 @@ def sort_array_char_count(array)
   array.sort{|a,b| a.length<=>b.length}
 end
 def swap_elements(array)
-  swap_array=[]
-  swap_array<<array[0]
-  swap_array<<array[2]
-  swap_array<<array[1]
+  [array[0],array[2],array[1]]
 end
 
 def swap_elements_from_to(array, origin_index, destination_index)
-
-array.each_with_index.collect do |item, index| 
-  if index==origin_index 
-    item=array[destination_index]
-  elsif index==destination_index
-    item=array[origin_index]
-  else
-    item
+  array.each_with_index.collect do |item, index|
+    if index==origin_index
+      item=array[destination_index]
+    elsif index==destination_index
+      item=array[origin_index]
+    else
+      item
+    end
   end
-    
-  #index==origin_index?array[destination_index]:array[index]
-  #index==destination_index?array[origin_index]:array[index]
-end
 end
 
 def reverse_array(array)
-  i=0
-  reverse_array=[]
-  while i<array.length
-    reverse_array.unshift(array[i])
-    i +=1
-  end
-  reverse_array
+  array.reverse
 end
 def kesha_maker(array)
-  i=0
   kesha__maker_array=[]
-  while i<array.length
-    array[i][2]="$"
-    kesha__maker_array<<array[i]
-    i+=1
+  array.each do|str|
+    str[2]="$"
+    kesha__maker_array<<str
   end
   kesha__maker_array
 end
