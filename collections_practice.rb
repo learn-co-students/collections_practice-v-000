@@ -5,8 +5,7 @@ def sort_array_asc(ary)
 end
 
 def sort_array_desc(ary)
-  sorted=ary.sort
-  return sorted.reverse
+  ary.sort.reverse
 end
 
 def sort_array_char_count(ary)
@@ -15,7 +14,7 @@ end
 
 def swap_elements(ary)
   ary[1],ary[2]=ary[2],ary[1]
-  return ary
+  ary
 end
 
 def reverse_array(ary)
@@ -35,11 +34,5 @@ def sum_array(ary)
 end
 
 def add_s(ary)
-  ary.collect do |word|
-    if word == ary[1]
-      word
-    else
-      "#{word}s"
-    end
-  end
+  ary.collect{|word| word == ary[1] ? word : "#{word}s"}
 end
