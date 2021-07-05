@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe 'collections practice' do
 
@@ -27,6 +28,19 @@ describe 'collections practice' do
   describe '#swap_elements' do
     it 'swap the second and third elements of an array' do
       expect(swap_elements(["blake", "ashley", "scott"])).to eq(["blake", "scott", "ashley"])
+    end
+  end
+
+  # Advanced
+  describe '#swap_elements_from_to' do
+    it 'swap the index and destination index elements of an array' do
+      expect(swap_elements_from_to(["blake", "ashley", "scott"], 0, 2)).to eq(["scott", "ashley", "blake"])
+    end
+  end
+  # Advanced
+  describe '#swap_elements_from_to' do
+    it 'swap the index and destination index elements of an array' do
+      expect(swap_elements_from_to(["blake", "ashley", "scott"], 2, 1)).to eq(["blake", "scott", "ashley"])
     end
   end
 
