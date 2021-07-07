@@ -67,3 +67,9 @@ describe 'collections practice' do
     end
   end
 end
+
+describe '#swap_elements_from_to' do
+  it 'allow you to specify the index of the element you would like to move to a new index. ' do
+    expect(swap_elements_from_to(["blake", "ashley", "scott", "tammy", "rachel"], 2, 4)).to eq(["blake", "ashley", "rachel", "tammy", "scott"])
+  end
+end
