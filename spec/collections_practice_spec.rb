@@ -67,3 +67,12 @@ describe 'collections practice' do
     end
   end
 end
+
+# Question 10
+describe '#swap_elements_custom' do
+  it 'swap the a and b elements of an array' do
+    a = 0
+    b = 1
+    expect(swap_elements(["blake", "ashley", "scott"], a, b)).to eq(["ashley", "blake", "scott"])
+  end
+end
