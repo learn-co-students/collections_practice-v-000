@@ -30,6 +30,13 @@ describe 'collections practice' do
     end
   end
 
+  # Question 4 - Advanced number 2
+  describe '#swap_elements_from_to' do
+    it 'swap elements of an array from origin to destination' do
+      expect(swap_elements_from_to(["apple", "orange", "mango", "pear", "banana", "kiwi"], 1, 4)).to eq(["apple", "banana", "mango", "pear", "orange", "kiwi"])
+    end
+  end
+
   # Question 5
   describe '#reverse_array' do
     it 'reverse the order of an array of integers' do
